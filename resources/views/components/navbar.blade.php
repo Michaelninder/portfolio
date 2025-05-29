@@ -10,23 +10,36 @@
     </div>
 
     <div class="flex items-center space-x-6">
-        <a href="{{ route('about') }}" class="hover:underline">{{ __('pages.about.title') }}</a>
-        <a href="{{ route('contact') }}" class="hover:underline">{{ __('pages.contact.title') }}</a>
+        {{-- About with icon --}}
+        <a href="{{ route('about') }}" class="flex items-center space-x-1 hover:underline">
+            <i data-lucide="user" class="w-5 h-5"></i>
+            <span>{{ __('pages.about.title') }}</span>
+        </a>
+
+        {{-- Contact with icon --}}
+        <a href="{{ route('contact') }}" class="flex items-center space-x-1 hover:underline">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+            <span>{{ __('pages.contact.title') }}</span>
+        </a>
 
         {{-- Language Dropdown --}}
         <div class="relative inline-block text-left">
-            <button id="lang-button" aria-haspopup="true" aria-expanded="false" aria-label="Language menu" class="flex items-center space-x-1 focus:outline-none">
+            <button id="lang-button" aria-haspopup="true" aria-expanded="false" aria-label="Language menu"
+                class="flex items-center space-x-2 focus:outline-none px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
                 <i data-lucide="globe" class="w-5 h-5 text-gray-700 dark:text-gray-300"></i>
-                <img src="{{ asset("img/SetLocale/$locale.png") }}" alt="{{ $locale }} flag" class="w-7 h-5 rounded">
+                <img src="{{ asset("img/SetLocale/$locale.png") }}" alt="{{ $locale }} flag"
+                    class="w-7 h-5 rounded border border-gray-300 dark:border-gray-600" />
             </button>
 
-            <div id="lang-menu" class="absolute right-0 mt-2 w-28 rounded shadow-lg bg-white dark:bg-gray-700 hidden z-50">
+            <div id="lang-menu"
+                class="absolute right-0 mt-2 w-28 rounded shadow-lg bg-white dark:bg-gray-700 hidden z-50">
                 <ul>
                     @foreach ($langFolders as $lang)
                         <li>
                             <a href="{{ route('lang.set', ['locale' => $lang]) }}"
-                               class="flex items-center px-4 py-2 w-full hover:bg-gray-200 dark:hover:bg-gray-600 {{ $locale === $lang ? 'bg-gray-200 dark:bg-gray-600 font-semibold' : '' }}">
-                                <img src="{{ asset("img/SetLocale/$lang.png") }}" alt="{{ $lang }} flag" class="w-7 h-5 mr-2 rounded">
+                                class="flex items-center px-4 py-2 w-full hover:bg-gray-200 dark:hover:bg-gray-600 {{ $locale === $lang ? 'bg-gray-200 dark:bg-gray-600 font-semibold' : '' }}">
+                                <img src="{{ asset("img/SetLocale/$lang.png") }}" alt="{{ $lang }} flag"
+                                    class="w-7 h-5 mr-2 rounded border border-gray-300 dark:border-gray-600" />
                                 <span class="flex-grow">{{ strtoupper($lang) }}</span>
                                 @if ($locale === $lang)
                                     <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
@@ -38,9 +51,10 @@
             </div>
         </div>
 
-        {{-- Theme Dropdown --}}
+        {{-- Theme Dropdown (unchanged) --}}
         <div class="relative inline-block text-left">
-            <button id="theme-button" aria-haspopup="true" aria-expanded="false" aria-label="Theme menu" class="flex items-center space-x-1 focus:outline-none">
+            <button id="theme-button" aria-haspopup="true" aria-expanded="false" aria-label="Theme menu"
+                class="flex items-center space-x-1 focus:outline-none">
                 <span id="theme-icon"></span>
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -51,7 +65,8 @@
                 <ul>
                     @foreach (['auto' => 'monitor', 'light' => 'sun', 'dark' => 'moon'] as $theme => $icon)
                         <li>
-                            <button data-theme="{{ $theme }}" class="flex items-center px-4 py-2 w-full text-left hover:bg-gray-200 dark:hover:bg-gray-600">
+                            <button data-theme="{{ $theme }}"
+                                class="flex items-center px-4 py-2 w-full text-left hover:bg-gray-200 dark:hover:bg-gray-600">
                                 <i data-lucide="{{ $icon }}" class="w-4 h-4 mr-2"></i> {{ __('menu.theme.' . $theme) }}
                             </button>
                         </li>
