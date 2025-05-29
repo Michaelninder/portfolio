@@ -6,7 +6,6 @@
     <title>@yield('title', 'Fabian Ternis')</title>
 	
 	<style>
-	  /* Preloader overlay */
 	  #preloader {
 	    position: fixed;
 	    inset: 0;
@@ -22,11 +21,10 @@
 	    background: #111827; /* Tailwind gray-900 */
 	  }
 	
-	  /* Spinner styling */
 	  .spinner {
-	    width: 40px;
-	    height: 40px;
-	    border: 4px solid rgba(0, 0, 0, 0.1);
+	    width: 64px;
+	    height: 64px;
+	    border: 5.45px solid rgba(0, 0, 0, 0.1);
 	    border-left-color: #333;
 	    border-radius: 50%;
 	    animation: spin 1s linear infinite;
