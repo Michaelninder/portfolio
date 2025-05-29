@@ -12,7 +12,6 @@
     <div class="flex items-center space-x-6">
         <a href="{{ route('about') }}" class="hover:underline">{{ __('pages.about.title') }}</a>
         <a href="{{ route('contact') }}" class="hover:underline">{{ __('pages.contact.title') }}</a>
-        <a href="{{ route('imprint') }}" class="hover:underline">{{ __('legal.imprint.title') }}</a>
 
         {{-- Language Dropdown --}}
         <div class="relative inline-block text-left">
