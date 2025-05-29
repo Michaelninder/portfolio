@@ -5,61 +5,32 @@
         <h1 class="text-3xl font-bold mb-4">{{ __('pages.home.welcome') }}</h1>
         <p class="mb-8 text-gray-600 dark:text-gray-300">{{ __('pages.home.intro') }}</p>
 
-        <!-- Cards Section -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Projects Card -->
-            <div class="bg-white dark:bg-gray-800 shadow rounded-2xl p-6 transition-transform hover:scale-105 hover:shadow-lg">
-                <h2 class="text-xl font-semibold mb-2">{{ __('pages.home.projects_title') }}</h2>
-                <p class="text-gray-600 dark:text-gray-400">{{ __('pages.home.projects_desc') }}</p>
-                <a href="{{ route('home') }}" class="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">
-                    {{ __('pages.home.view_projects') }}
-                </a>
-            </div>
+            @php
+                $cards = [
+                    ['icon' => 'folder-open', 'title' => 'projects_title', 'desc' => 'projects_desc', 'link' => route('home'), 'label' => 'view_projects'],
+                    ['icon' => 'code', 'title' => 'skills_title', 'desc' => 'skills_desc', 'link' => route('about') . '#skills', 'label' => 'view_skills'],
+                    ['icon' => 'mail', 'title' => 'contact_title', 'desc' => 'contact_desc', 'link' => route('contact'), 'label' => 'get_in_touch'],
+                    ['icon' => 'user', 'title' => 'about_title', 'desc' => 'about_desc', 'link' => route('about'), 'label' => 'view_about'],
+                    ['icon' => 'list', 'title' => 'changelog_title', 'desc' => 'changelog_desc', 'link' => route('home'), 'label' => 'view_changelog'],
+                    ['icon' => 'globe', 'title' => 'domains_title', 'desc' => 'domains_desc', 'link' => route('home'), 'label' => 'view_domains'],
+                ];
+            @endphp
 
-            <!-- Skills Card -->
-            <div class="bg-white dark:bg-gray-800 shadow rounded-2xl p-6 transition-transform hover:scale-105 hover:shadow-lg">
-                <h2 class="text-xl font-semibold mb-2">{{ __('pages.home.skills_title') }}</h2>
-                <p class="text-gray-600 dark:text-gray-400">{{ __('pages.home.skills_desc') }}</p>
-                <a href="{{ route('about') }}#skills" class="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">
-                    {{ __('pages.home.view_skills') }}
-                </a>
-            </div>
-
-            <!-- Contact Card -->
-            <div class="bg-white dark:bg-gray-800 shadow rounded-2xl p-6 transition-transform hover:scale-105 hover:shadow-lg">
-                <h2 class="text-xl font-semibold mb-2">{{ __('pages.home.contact_title') }}</h2>
-                <p class="text-gray-600 dark:text-gray-400">{{ __('pages.home.contact_desc') }}</p>
-                <a href="{{ route('contact') }}" class="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">
-                    {{ __('pages.home.get_in_touch') }}
-                </a>
-            </div>
-
-            <!-- About Card -->
-            <div class="bg-white dark:bg-gray-800 shadow rounded-2xl p-6 transition-transform hover:scale-105 hover:shadow-lg">
-                <h2 class="text-xl font-semibold mb-2">{{ __('pages.home.about_title') }}</h2>
-                <p class="text-gray-600 dark:text-gray-400">{{ __('pages.home.about_desc') }}</p>
-                <a href="{{ route('about') }}" class="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">
-                    {{ __('pages.home.view_about') }}
-                </a>
-            </div>
-
-            <!-- Changelog Card -->
-            <div class="bg-white dark:bg-gray-800 shadow rounded-2xl p-6 transition-transform hover:scale-105 hover:shadow-lg">
-                <h2 class="text-xl font-semibold mb-2">{{ __('pages.home.changelog_title') }}</h2>
-                <p class="text-gray-600 dark:text-gray-400">{{ __('pages.home.changelog_desc') }}</p>
-                <a href="{{ route('home') }}" class="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">
-                    {{ __('pages.home.view_changelog') }}
-                </a>
-            </div>
-
-            <!-- Domains Card -->
-            <div class="bg-white dark:bg-gray-800 shadow rounded-2xl p-6 transition-transform hover:scale-105 hover:shadow-lg">
-                <h2 class="text-xl font-semibold mb-2">{{ __('pages.home.domains_title') }}</h2>
-                <p class="text-gray-600 dark:text-gray-400">{{ __('pages.home.domains_desc') }}</p>
-                <a href="{{ route('home') }}" class="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">
-                    {{ __('pages.home.view_domains') }}
-                </a>
-            </div>
+            @foreach($cards as $card)
+                <div class="group bg-white dark:bg-gray-800 shadow rounded-2xl p-6 transition-transform hover:scale-105 hover:shadow-xl">
+                    <div class="flex items-center mb-4 space-x-3">
+                        <div class="text-blue-600 dark:text-blue-400 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
+                            <i data-lucide="{{ $card['icon'] }}" class="w-6 h-6"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold">{{ __('pages.home.' . $card['title']) }}</h2>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">{{ __('pages.home.' . $card['desc']) }}</p>
+                    <a href="{{ $card['link'] }}" class="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">
+                        {{ __('pages.home.' . $card['label']) }}
+                    </a>
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection
