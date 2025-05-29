@@ -17,16 +17,16 @@
         {{-- Language Dropdown --}}
         <div class="relative inline-block text-left">
             <button id="lang-button" class="focus:outline-none" aria-haspopup="true" aria-expanded="false" aria-label="Language menu">
-                <img src="{{ asset("img/SetLocale/$locale.png") }}" class="w-5 h-5 rounded" alt="{{ $locale }} flag">
+                <img src="{{ asset("img/SetLocale/$locale.png") }}" class="w-7 h-5 rounded" alt="{{ $locale }} flag">
             </button>
 
-            <div id="lang-menu" class="absolute right-0 mt-2 w-28 rounded shadow-lg bg-white dark:bg-gray-700 hidden z-50">
+            <div id="lang-menu" class="absolute right-0 mt-2 w-20 rounded shadow-lg bg-white dark:bg-gray-700 hidden z-50">
                 <ul>
                     @foreach ($langFolders as $lang)
                         <li>
                             <a href="{{ route('lang.set', ['locale' => $lang]) }}"
                                class="w-full flex items-center px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600 {{ $locale === $lang ? 'bg-gray-200 dark:bg-gray-600 font-semibold' : '' }}">
-                                <img src="{{ asset("img/SetLocale/$lang.png") }}" class="w-4 h-4 mr-2 rounded" alt="{{ $lang }} flag">
+                                <img src="{{ asset("img/SetLocale/$lang.png") }}" class="w-7 h-5 mr-2 rounded" alt="{{ $lang }} flag">
                                 {{ strtoupper($lang) }}
                             </a>
                         </li>
@@ -44,21 +44,21 @@
                 </svg>
             </button>
 
-            <div id="theme-menu" class="absolute right-0 mt-2 w-32 rounded shadow-lg bg-white dark:bg-gray-700 hidden z-50">
+            <div id="theme-menu" class="absolute right-0 mt-2 w-25 rounded shadow-lg bg-white dark:bg-gray-700 hidden z-50">
                 <ul>
                     <li>
                         <button class="w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600 flex items-center" data-theme="auto">
-                            <i data-lucide="monitor" class="w-4 h-4 mr-2"></i> Auto
+                            <i data-lucide="monitor" class="w-4 h-4 mr-2"></i> {{ __('menu.theme.auto') }}
                         </button>
                     </li>
                     <li>
                         <button class="w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600 flex items-center" data-theme="light">
-                            <i data-lucide="sun" class="w-4 h-4 mr-2"></i> Light
+                            <i data-lucide="sun" class="w-4 h-4 mr-2"></i> {{ __('menu.theme.light') }}
                         </button>
                     </li>
                     <li>
                         <button class="w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600 flex items-center" data-theme="dark">
-                            <i data-lucide="moon" class="w-4 h-4 mr-2"></i> Dark
+                            <i data-lucide="moon" class="w-4 h-4 mr-2"></i> {{ __('menu.theme.dark') }}
                         </button>
                     </li>
                 </ul>
