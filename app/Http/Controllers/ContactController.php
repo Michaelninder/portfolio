@@ -17,7 +17,7 @@ class ContactController extends Controller
             'message' => 'required|string',
         ]);
 
-        Mail::to('your-email@example.com')->send(new ContactFormMail($validatedData));
+        Mail::to('your-email@example.com')->send(new ContactFormMail($validatedData)); //have to setup a email-address for it later
 
         return back()->with('success', 'Your message has been sent successfully!');
     }
