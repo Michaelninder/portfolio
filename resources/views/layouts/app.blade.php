@@ -89,9 +89,7 @@
                 0 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        .nav-link.active-state:hover:before {
-            opacity: 0;
-        }
+        .nav-link.active-state:hover:before { opacity: 0; }
     </style>
 </head>
 <body class="antialiased">
