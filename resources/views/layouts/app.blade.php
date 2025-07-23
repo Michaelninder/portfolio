@@ -34,9 +34,64 @@
         @keyframes bounce-icon { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         .nav-menu-mobile { transform: translateX(100%); transition: transform 0.3s ease-out; z-index: 55; }
         .nav-menu-mobile.open { transform: translateX(0); }
-        .nav-link.hover-effect:hover { background-color: rgba(255, 255, 255, 0.15); }
-        .nav-link.active-state { background-color: rgba(0, 0, 0, 0.15); }
-        .nav-link.active-state:hover { background-color: rgba(100, 100, 100, 0.25); }
+        .nav-3d-effect {
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow:
+                -2px -2px 6px rgba(255, 255, 255, 0.1),
+                2px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+        .nav-3d-effect:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0.75rem;
+            transform: translateZ(-3px);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            pointer-events: none;
+            opacity: 0;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .nav-3d-effect:hover {
+            transform: translateZ(8px) scale(1.02);
+            box-shadow:
+                -4px -4px 10px rgba(255, 255, 255, 0.15),
+                4px 4px 10px rgba(0, 0, 0, 0.4),
+                inset 0 0 10px rgba(255, 255, 255, 0.05);
+        }
+        .nav-3d-effect:hover:before {
+            transform: translateZ(-8px);
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .nav-link.active-state {
+            transform: translateZ(-5px);
+            background-color: rgba(0, 0, 0, 0.35);
+            box-shadow:
+                inset 2px 2px 6px rgba(0, 0, 0, 0.6),
+                inset -2px -2px 6px rgba(255, 255, 255, 0.05),
+                0 1px 2px rgba(0, 0, 0, 0.4);
+            pointer-events: none;
+            cursor: default;
+        }
+        .nav-link.active-state:hover {
+            transform: translateZ(-6px);
+            background-color: rgba(0, 0, 0, 0.45);
+            box-shadow:
+                inset 3px 3px 8px rgba(0, 0, 0, 0.7),
+                inset -3px -3px 8px rgba(255, 255, 255, 0.08),
+                0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-link.active-state:hover:before {
+            opacity: 0;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -44,13 +99,13 @@
         <div class="container mx-auto flex justify-between items-center">
             <a href="{{ route('home') }}" class="text-xl font-bold text-white tracking-wider">Fabian Ternis</a>
             <div class="hidden md:flex space-x-2 text-lg">
-                <a href="{{ route('home') }}" class="px-3 py-1 rounded-xl nav-link hover-effect text-gray-300 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('home') ? 'active-state' : '' }}">Home</a>
-                <a href="{{ route('experience') }}" class="px-3 py-1 rounded-xl nav-link hover-effect text-gray-300 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('experience') ? 'active-state' : '' }}">Experience</a>
-                <a href="{{ route('education') }}" class="px-3 py-1 rounded-xl nav-link hover-effect text-gray-300 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('education') ? 'active-state' : '' }}">Education</a>
-                <a href="{{ route('tools') }}" class="px-3 py-1 rounded-xl nav-link hover-effect text-gray-300 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('tools') ? 'active-state' : '' }}">Tools</a>
-                <a href="{{ route('projects') }}" class="px-3 py-1 rounded-xl nav-link hover-effect text-gray-300 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('projects') ? 'active-state' : '' }}">Projects</a>
-                <a href="{{ route('contact') }}" class="px-3 py-1 rounded-xl nav-link hover-effect text-gray-300 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('contact') ? 'active-state' : '' }}">Contact</a>
-                <a href="{{ route('imprint') }}" class="px-3 py-1 rounded-xl nav-link hover-effect text-gray-300 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('imprint') ? 'active-state' : '' }}">Imprint</a>
+                <a href="{{ route('home') }}" class="px-3 py-1 rounded-xl nav-link nav-3d-effect text-gray-300 hover:text-white {{ Route::currentRouteNamed('home') ? 'active-state' : '' }}">Home</a>
+                <a href="{{ route('experience') }}" class="px-3 py-1 rounded-xl nav-link nav-3d-effect text-gray-300 hover:text-white {{ Route::currentRouteNamed('experience') ? 'active-state' : '' }}">Experience</a>
+                <a href="{{ route('education') }}" class="px-3 py-1 rounded-xl nav-link nav-3d-effect text-gray-300 hover:text-white {{ Route::currentRouteNamed('education') ? 'active-state' : '' }}">Education</a>
+                <a href="{{ route('tools') }}" class="px-3 py-1 rounded-xl nav-link nav-3d-effect text-gray-300 hover:text-white {{ Route::currentRouteNamed('tools') ? 'active-state' : '' }}">Tools</a>
+                <a href="{{ route('projects') }}" class="px-3 py-1 rounded-xl nav-link nav-3d-effect text-gray-300 hover:text-white {{ Route::currentRouteNamed('projects') ? 'active-state' : '' }}">Projects</a>
+                <a href="{{ route('contact') }}" class="px-3 py-1 rounded-xl nav-link nav-3d-effect text-gray-300 hover:text-white {{ Route::currentRouteNamed('contact') ? 'active-state' : '' }}">Contact</a>
+                <a href="{{ route('imprint') }}" class="px-3 py-1 rounded-xl nav-link nav-3d-effect text-gray-300 hover:text-white {{ Route::currentRouteNamed('imprint') ? 'active-state' : '' }}">Imprint</a>
             </div>
             <button id="nav-toggle" class="md:hidden text-white text-3xl focus:outline-none">
                 <i id="nav-toggle-icon" class="bi bi-list"></i>
@@ -63,13 +118,13 @@
             <i class="bi bi-x"></i>
         </button>
         <div class="space-y-8 text-3xl text-center">
-            <a href="{{ route('home') }}" class="block px-3 py-2 rounded-xl nav-link hover-effect text-gray-200 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('home') ? 'active-state' : '' }}">Home</a>
-            <a href="{{ route('experience') }}" class="block px-3 py-2 rounded-xl nav-link hover-effect text-gray-200 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('experience') ? 'active-state' : '' }}">Experience</a>
-            <a href="{{ route('education') }}" class="block px-3 py-2 rounded-xl nav-link hover-effect text-gray-200 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('education') ? 'active-state' : '' }}">Education</a>
-            <a href="{{ route('tools') }}" class="block px-3 py-2 rounded-xl nav-link hover-effect text-gray-200 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('tools') ? 'active-state' : '' }}">Tools</a>
-            <a href="{{ route('projects') }}" class="block px-3 py-2 rounded-xl nav-link hover-effect text-gray-200 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('projects') ? 'active-state' : '' }}">Projects</a>
-            <a href="{{ route('contact') }}" class="block px-3 py-2 rounded-xl nav-link hover-effect text-gray-200 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('contact') ? 'active-state' : '' }}">Contact</a>
-            <a href="{{ route('imprint') }}" class="block px-3 py-2 rounded-xl nav-link hover-effect text-gray-200 hover:text-white transition-colors duration-300 {{ Route::currentRouteNamed('imprint') ? 'active-state' : '' }}">Imprint</a>
+            <a href="{{ route('home') }}" class="block px-3 py-2 rounded-xl nav-link nav-3d-effect text-gray-200 hover:text-white {{ Route::currentRouteNamed('home') ? 'active-state' : '' }}">Home</a>
+            <a href="{{ route('experience') }}" class="block px-3 py-2 rounded-xl nav-link nav-3d-effect text-gray-200 hover:text-white {{ Route::currentRouteNamed('experience') ? 'active-state' : '' }}">Experience</a>
+            <a href="{{ route('education') }}" class="block px-3 py-2 rounded-xl nav-link nav-3d-effect text-gray-200 hover:text-white {{ Route::currentRouteNamed('education') ? 'active-state' : '' }}">Education</a>
+            <a href="{{ route('tools') }}" class="block px-3 py-2 rounded-xl nav-link nav-3d-effect text-gray-200 hover:text-white {{ Route::currentRouteNamed('tools') ? 'active-state' : '' }}">Tools</a>
+            <a href="{{ route('projects') }}" class="block px-3 py-2 rounded-xl nav-link nav-3d-effect text-gray-200 hover:text-white {{ Route::currentRouteNamed('projects') ? 'active-state' : '' }}">Projects</a>
+            <a href="{{ route('contact') }}" class="block px-3 py-2 rounded-xl nav-link nav-3d-effect text-gray-200 hover:text-white {{ Route::currentRouteNamed('contact') ? 'active-state' : '' }}">Contact</a>
+            <a href="{{ route('imprint') }}" class="block px-3 py-2 rounded-xl nav-link nav-3d-effect text-gray-200 hover:text-white {{ Route::currentRouteNamed('imprint') ? 'active-state' : '' }}">Imprint</a>
         </div>
     </div>
 
