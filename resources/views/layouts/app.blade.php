@@ -27,6 +27,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
+        body::-webkit-scrollbar { display: none; }
         .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
         .gradient-text { background: linear-gradient(45deg, #a7b6ff, #5f5fbe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #e2e8f0; }
