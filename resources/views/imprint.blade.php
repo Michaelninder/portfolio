@@ -112,6 +112,13 @@
                 <li>dsc.pics (*.dsc.pics)</li>
                 <li>gimy.site (not the sites hosted on gimy.site)</li>
                 <li>urlk.app (not for redirected sites)</li>
+                <li>twch.pics</li>
+                <li>fabianternis.dev</li>
+                <li>fabianternis.de</li>
+                <li>pleasehireme.eu</li>
+                <li>getmy.name</li>
+                <li>getmy.blog</li>
+                <li>fabian-ternis.de</li>
             </ul>
         </div>
     </div>
@@ -119,7 +126,6 @@
 @endsection
 
 <style>
-/* Custom scrollbar for the domain list on imprint page */
 .custom-scrollbar::-webkit-scrollbar {
     width: 8px;
 }
@@ -130,7 +136,7 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #667eea; /* A gradient color, or a specific shade */
+    background-color: #667eea;
     border-radius: 10px;
     border: 2px solid #1e293b;
 }
