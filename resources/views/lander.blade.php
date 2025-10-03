@@ -15,13 +15,13 @@
         <div class="absolute inset-0 bg-black opacity-60"></div>
     </div>
     <div class="relative z-10 p-6 max-w-4xl mx-auto">
-        <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-6 gradient-text" data-aos="fade-up">
+        <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-6 text-indigo-400" data-aos="fade-up">
             Fabian Ternis
         </h1>
         <p class="text-3xl md:text-4xl text-gray-200 mb-8 font-light type-effect" data-text="Laravel Developer" data-aos="fade-up" data-aos-delay="300">
             <!-- Text will be typed by JS -->
         </p>
-        <a href="{{ route('projects') }}" class="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xl px-10 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
+        <a href="{{ route('projects') }}" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xl px-10 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
             View My Work
         </a>
     </div>
@@ -29,7 +29,7 @@
 
 <section class="py-20 bg-gray-900 text-center">
     <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold gradient-text mb-8" data-aos="fade-up">Hello, I'm Fabian!</h2>
+        <h2 class="text-4xl font-bold text-fuchsia-400 mb-8" data-aos="fade-up">Hello, I'm Fabian!</h2>
         <p class="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
             I'm a passionate Laravel & Backend Developer, specializing in creating robust web applications, optimizing databases, and building powerful software tools. I love turning complex ideas into simple, high-performance digital solutions.
         </p>

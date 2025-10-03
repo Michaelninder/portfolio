@@ -29,7 +29,6 @@
     <style>
         body::-webkit-scrollbar { display: none; }
         .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .gradient-text { background: linear-gradient(45deg, #a7b6ff, #5f5fbe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #e2e8f0; }
         .tool-card:hover i { animation: bounce-icon 0.6s ease-in-out; }
         @keyframes bounce-icon { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
