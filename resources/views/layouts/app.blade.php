@@ -94,7 +94,7 @@
     </style>
 </head>
 <body class="antialiased">
-    <nav class="fixed w-full z-50 p-4 bg-gradient-to-r from-blue-900 to-purple-900 shadow-lg bg-opacity-80 backdrop-filter backdrop-blur-lg">
+    <nav class="fixed w-full z-50 p-4 bg-gradient-to-r from-blue-900 to-indigo-500 shadow-lg bg-opacity-80 backdrop-filter backdrop-blur-lg">
         <div class="container mx-auto flex justify-between items-center">
             <a href="{{ route('home') }}" class="text-xl font-bold text-white tracking-wider">Fabian Ternis</a>
             <div class="hidden md:flex space-x-2 text-lg">
@@ -112,7 +112,7 @@
         </div>
     </nav>
 
-    <div id="nav-menu-mobile" class="nav-menu-mobile fixed top-0 right-0 w-full md:w-1/2 h-full bg-gradient-to-br from-blue-900 to-purple-900 p-8 shadow-xl flex flex-col justify-center items-center md:hidden">
+    <div id="nav-menu-mobile" class="nav-menu-mobile fixed top-0 right-0 w-full md:w-1/2 h-full bg-gradient-to-br from-blue-900 to-indigo-500 p-8 shadow-xl flex flex-col justify-center items-center md:hidden">
         <button id="close-nav" class="absolute top-4 right-4 text-white text-4xl focus:outline-none">
             <i class="bi bi-x"></i>
         </button>
@@ -131,7 +131,7 @@
         @yield('content')
     </main>
 
-    <footer class="bg-gradient-to-r from-blue-900 to-purple-900 text-gray-300 p-8 text-center mt-12">
+    <footer class="bg-gradient-to-r from-blue-900 to-indigo-500 text-gray-300 p-8 text-center mt-12">
         <div class="container mx-auto">
             <p>&copy; {{ date('Y') }} Fabian Ternis. All rights reserved.</p>
             <div class="mt-4 space-x-6">
