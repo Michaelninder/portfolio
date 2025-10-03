@@ -14,7 +14,7 @@
 
 <section class="py-20 bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-center gradient-text mb-12" data-aos="fade-up">My
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-center text-blue-400 mb-12" data-aos="fade-up">My
             Educational Journey</h1>
 
         <div class="relative">

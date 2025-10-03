@@ -13,7 +13,7 @@
 @section('content')
 <section class="py-20 bg-gray-900">
     <div class="container mx-auto px-6">
-        <h1 class="text-5xl font-extrabold text-center gradient-text mb-12" data-aos="fade-up">My Professional Journey & Projects</h1>
+        <h1 class="text-5xl font-extrabold text-center text-sky-400 mb-12" data-aos="fade-up">My Professional Journey & Projects</h1>
 
         <div class="space-y-12">
             <!-- Experience Item: Owner – XP Systems & EuropeHost -->

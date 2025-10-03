@@ -13,7 +13,7 @@
 @section('content')
 <section class="py-20 bg-gray-900">
     <div class="container mx-auto px-6 max-w-2xl">
-        <h1 class="text-5xl font-extrabold text-center gradient-text mb-12" data-aos="fade-up">Get In Touch</h1>
+        <h1 class="text-5xl font-extrabold text-center text-indigo-400 mb-12" data-aos="fade-up">Get In Touch</h1>
 
         <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-500" data-aos="fade-up" data-aos-delay="200">
             <p class="text-lg text-gray-300 text-center mb-8">

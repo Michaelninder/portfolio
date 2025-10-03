@@ -13,7 +13,7 @@
 @section('content')
 <section class="py-20 bg-gray-900">
     <div class="container mx-auto px-6">
-        <h1 class="text-5xl font-extrabold text-center gradient-text mb-12" data-aos="fade-up">My Key Projects &
+        <h1 class="text-5xl font-extrabold text-center text-purple-400 mb-12" data-aos="fade-up">My Key Projects &
             Works</h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">

@@ -13,7 +13,7 @@
 @section('content')
 <section class="py-20 bg-gray-900 min-h-screen">
     <div class="container mx-auto px-6 max-w-3xl">
-        <h1 class="text-5xl font-extrabold text-center gradient-text mb-12" data-aos="fade-up">Imprint / Impressum</h1>
+        <h1 class="text-5xl font-extrabold text-center text-amber-400 mb-12" data-aos="fade-up">Imprint / Impressum</h1>
 
         <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-yellow-500" data-aos="fade-up" data-aos-delay="200">
             <h2 class="text-3xl font-bold text-white mb-4">Information according to § 5 TMG</h2>
