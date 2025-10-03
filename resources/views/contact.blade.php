@@ -11,21 +11,31 @@
 @section('twitter_description', 'How to connect with Fabian Ternis for professional inquiries.')
 
 @section('content')
-<section class="py-20 bg-gray-900">
-    <div class="container mx-auto px-6 max-w-2xl">
-        <h1 class="text-5xl font-extrabold text-center text-indigo-400 mb-12" data-aos="fade-up">Get In Touch</h1>
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h1 class="text-5xl font-extrabold text-center text-indigo-400 mb-12"
+                data-aos="fade-up">Get In Touch</h1>
 
-        <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-500" data-aos="fade-up" data-aos-delay="200">
-            <p class="text-lg text-gray-300 text-center mb-8">
-                Have a project in mind, a question, or just want to say hi? Feel free to reach out!
-            </p>
+            <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-500"
+                data-aos="fade-up" data-aos-delay="200">
+                <p class="text-lg text-gray-300 text-center mb-8">
+                    Have a project in mind, a question, or just want to say hi? Feel
+                    free to reach out!
+                </p>
 
-            @if(session('success'))
-                <div class="bg-green-600 text-white p-4 rounded-md mb-6 text-center">
-                    {{ session('success') }}
+                @if (session('success'))
+                    <div class="bg-green-600 text-white p-4 rounded-md mb-6 text-center">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+                {{-- Temporarily disabled form --}}
+                <div class="bg-amber-200 text-slate-700 p-4 rounded-md mb-6 text-center text-lg font-semibold">
+                    The contact form is temporarily unavailable. Please use the email
+                    link below.
                 </div>
-            @endif
 
+                {{--
             <form action="{{ route('contact.submit') }}" method="POST" class="space-y-6">
                 @csrf
                 <div data-aos="fade-up" data-aos-delay="300">
@@ -61,24 +71,29 @@
                 </div>
 
                 <div data-aos="fade-up" data-aos-delay="700">
-                    <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xl px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-bold">
+                    <button type="submit" class="w-full bg-indigo-500 text-white text-xl px-8 py-4 rounded-full shadow-lg hover:bg-indigo-600 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition-all duration-300 font-bold">
                         Send Message <i class="bi bi-send ml-2"></i>
                     </button>
                 </div>
             </form>
-        </div>
-
-        <div class="text-center mt-12 space-y-4" data-aos="fade-up" data-aos-delay="800">
-            <p class="text-xl text-gray-300">
-                You can also find me here:
-            </p>
-            <div class="space-x-6">
-                <a href="https://github.com/michaelninder" target="_blank" class="text-gray-300 hover:text-white transition-colors duration-300" title="GitHub"><i class="bi bi-github text-4xl"></i></a>
-                <a href="mailto:f.ternis@xpsystems.eu" class="text-gray-300 hover:text-white transition-colors duration-300" title="Email"><i class="bi bi-envelope text-4xl"></i></a>
-                {{-- <a href="#" target="_blank" class="text-gray-300 hover:text-white transition-colors duration-300" title="LinkedIn"><i class="bi bi-linkedin text-4xl"></i></a> --}}
+            --}}
             </div>
-            <p class="text-gray-400 text-lg mt-4">Location: Germany</p>
+
+            <div class="text-center mt-12 space-y-4" data-aos="fade-up"
+                data-aos-delay="800">
+                <p class="text-xl text-gray-300">
+                    You can also find me here:
+                </p>
+                <div class="space-x-6">
+                    <a href="https://github.com/michaelninder" target="_blank"
+                        class="text-gray-300 hover:text-white transition-colors duration-300"
+                        title="GitHub"><i class="bi bi-github text-4xl"></i></a>
+                    <a href="mailto:f.ternis@xpsystems.eu"
+                        class="text-gray-300 hover:text-white transition-colors duration-300"
+                        title="Email"><i class="bi bi-envelope text-4xl"></i></a>
+                </div>
+                <p class="text-gray-400 text-lg mt-4">Location: Germany</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 @endsection
