@@ -11,287 +11,184 @@
 @section('twitter_description', 'Dive into my portfolio of web development and software engineering projects.')
 
 @section('content')
-<section class="py-20 bg-gray-900">
-    <div class="container mx-auto px-6">
-        <h1 class="text-5xl font-extrabold text-center text-purple-400 mb-12" data-aos="fade-up">My Key Projects &
-            Works</h1>
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl font-extrabold text-center text-purple-400 mb-12" data-aos="fade-up">My Key Projects &
+                Works</h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            @php
+                $projects = [
+                    [
+                        'name' => 'MTEX.dev',
+                        'image' => 'mtex.png',
+                        'tech_stack' => 'Laravel, Custom Tools, Custom API',
+                        'description' => 'A platform offering minimal, powerful, and free tools for software planning and development. MTEX focuses on reducing friction in early development from intuitive database modeling to intelligent dev utilities.',
+                        'url' => 'https://mtex.dev',
+                        'color_class' => 'text-pink-400',
+                        'delay' => '100',
+                    ],
+                    [
+                        'name' => 'getmy.name',
+                        'image' => 'getmy_name.png',
+                        'tech_stack' => 'API, Laravel, Portfolio',
+                        'description' => 'A free and open-source API by MTEX.dev to fetch and display your personal portfolio data, perfect for dynamic "about me" sections or custom portfolio sites.',
+                        'url' => 'https://getmy.name',
+                        'color_class' => 'text-orange-400',
+                        'delay' => '200',
+                    ],
+                    [
+                        'name' => 'gimy.site',
+                        'image' => 'gimy-site.png',
+                        'tech_stack' => 'Free Website Host, Laravel',
+                        'description' => 'Gimy.site is a rapid-deployment platform by MTEX.dev for static websites. Write HTML, CSS, and JS for multiple pages and publish your sites instantly.',
+                        'url' => 'https://gimy.site',
+                        'color_class' => 'text-violet-400',
+                        'delay' => '300',
+                    ],
+                    [
+                        'name' => 'XP Systems',
+                        'image' => 'xpsystems.png',
+                        'tech_stack' => 'Laravel, Hosting Solutions',
+                        'description' => 'The official launch of XPsystems.eu, building open-source Laravel tools, custom hosting solutions, and robust backend services.',
+                        'url' => 'https://xpsystems.eu',
+                        'color_class' => 'text-indigo-400',
+                        'delay' => '400',
+                    ],
+                    [
+                        'name' => 'EuropeHost.eu',
+                        'image' => 'europehost.png',
+                        'tech_stack' => 'Hosting Platform, Backend',
+                        'description' => "Part of XP Systems' offerings, providing custom hosting solutions with a focus on robust backend infrastructure.",
+                        'url' => 'https://europehost.eu',
+                        'color_class' => 'text-purple-400',
+                        'delay' => '500',
+                    ],
+                    [
+                        'name' => 'XP-Host.de',
+                        'image' => 'xphost.png',
+                        'tech_stack' => 'Linux, Pterodactyl (Laravel-based)',
+                        'description' => 'Launched a free Minecraft hosting platform built on Pterodactyl, showcasing experience with game server management and custom web interfaces.',
+                        'url' => 'https://gamepanel.xp-host.de',
+                        'url_text' => 'Visit Gamepanel',
+                        'color_class' => 'text-green-400',
+                        'delay' => '600',
+                    ],
+                    [
+                        'name' => 'yourlink.app',
+                        'image' => 'yourlink.png',
+                        'tech_stack' => 'Link Management, SaaS, Analytics',
+                        'description' => 'A simple, privacy-friendly link management platform with short links, statistics, and custom branding for personal or business use.',
+                        'url' => 'https://yourlink.app',
+                        'color_class' => 'text-blue-400',
+                        'delay' => '700',
+                    ],
+                    [
+                        'name' => 'dsc.pics',
+                        'image' => 'dscpics.png',
+                        'tech_stack' => 'Image Hosting, Direct Links',
+                        'description' => 'A fast, no-nonsense image hosting platform focused on Discord and forum-friendly sharing with direct link support.',
+                        'url' => 'https://dsc.pics',
+                        'color_class' => 'text-pink-400',
+                        'delay' => '800',
+                    ],
+                    [
+                        'name' => 'anlink.eu',
+                        'image' => 'anlink.png',
+                        'tech_stack' => 'Shortlink Platform, Analytics',
+                        'description' => 'A minimalistic and efficient shortlink service with optional analytics, designed for personal use and privacy-focused sharing.',
+                        'url' => 'https://anlink.eu',
+                        'color_class' => 'text-green-400',
+                        'delay' => '900',
+                    ],
+                    [
+                        'name' => 'MoodFood',
+                        'image' => 'moodfood.png',
+                        'tech_stack' => 'Healthy Recipes Platform',
+                        'description' => 'A platform dedicated to healthy recipes, focusing on nutrition and well-being through curated meal ideas and cooking tips.',
+                        'url' => 'https://moodfood.hhgkl.de',
+                        'color_class' => 'text-blue-300',
+                        'delay' => '1000',
+                    ],
+                    [
+                        'name' => 'Kaufenhof.de',
+                        'image' => 'kaufenhof.png',
+                        'tech_stack' => 'Onlineshop',
+                        'description' => 'An online shop system with cash payment and in-person pickup for students of a school.',
+                        'url' => 'https://kaufenhof.de',
+                        'color_class' => 'text-purple-500',
+                        'delay' => '1100',
+                    ],
+                    [
+                        'name' => 'FahraApp (Carpooling)',
+                        'image' => null,
+                        'tech_stack' => 'PHP, MySQL, Bootstrap, APIs',
+                        'description' => 'Collaborated on a school-based carpooling web app, integrating routing/geocoding APIs. A multi-year project showcasing teamwork and full-stack development.',
+                        'url' => null,
+                        'url_text' => 'School Project - Details available on request',
+                        'color_class' => 'text-yellow-300',
+                        'delay' => '1200',
+                    ],
+                    [
+                        'name' => 'Django & Python Web App',
+                        'image' => null,
+                        'tech_stack' => 'Python, Django',
+                        'description' => 'My first real project with Python and the Django framework, exploring backend capabilities beyond PHP for diverse development.',
+                        'url' => null,
+                        'url_text' => 'Code available on request',
+                        'color_class' => 'text-cyan-300',
+                        'delay' => '1300',
+                    ],
+                    [
+                        'name' => 'MadGrower.de',
+                        'image' => null,
+                        'tech_stack' => 'MinecraftServer, Forum, Support',
+                        'description' => 'Joined the MadGrower.de team as a Web Developer, contributing to custom PHP development and seamless server integrations.',
+                        'url' => null,
+                        'url_text' => 'Site might be private or retired.',
+                        'color_class' => 'text-orange-300',
+                        'delay' => '1400',
+                    ],
+                    [
+                        'name' => 'XP-Craft.de',
+                        'image' => null,
+                        'tech_stack' => 'Minecraft Server, Custom PHP',
+                        'description' => 'Developed a custom PHP website for my Minecraft server after migrating from GitHub Pages, enhancing the user experience.',
+                        'url' => null,
+                        'url_text' => 'Site might be private or retired.',
+                        'color_class' => 'text-lime-300',
+                        'delay' => '1500',
+                    ],
+                    // Removed URLK.app as per previous comment
+                ];
+            @endphp
 
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="100">
-                <img src="{{ asset('img/projects/mtex.png') }}" alt="MTEX.dev"
-                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">MTEX.dev</h3>
-                    <p class="text-md text-pink-300 mb-4">Laravel, Custom Tools, Custom API</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        A platform offering minimal, powerful, and free tools for software planning and development.
-                        MTEX focuses on reducing friction in early development from intuitive database modeling to
-                        intelligent dev utilities.
-                    </p>
-                    <a href="https://mtex.dev" target="_blank"
-                        class="text-pink-400 hover:text-pink-300 font-semibold flex items-center">
-                        Visit Platform <i class="bi bi-box-arrow-up-right ml-2"></i>
-                    </a>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                @foreach ($projects as $project)
+                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
+                        data-aos="fade-up" data-aos-delay="{{ $project['delay'] }}">
+                        @if ($project['image'])
+                            <img src="{{ asset('img/projects/' . $project['image']) }}" alt="{{ $project['name'] }}"
+                                class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                        @endif
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">{{ $project['name'] }}</h3>
+                            <p class="text-md {{ str_replace('text-', 'text-', $project['color_class']) }}-300 mb-4">
+                                {{ $project['tech_stack'] }}</p>
+                            <p class="text-gray-300 text-base mb-4">
+                                {{ $project['description'] }}
+                            </p>
+                            @if ($project['url'])
+                                <a href="{{ $project['url'] }}" target="_blank"
+                                    class="{{ $project['color_class'] }} hover:{{ str_replace('text-', 'text-', $project['color_class']) }}-300 font-semibold flex items-center">
+                                    {{ $project['url_text'] ?? 'Visit Website' }} <i class="bi bi-box-arrow-up-right ml-2"></i>
+                                </a>
+                            @else
+                                <span class="text-gray-500 italic text-sm">{{ $project['url_text'] }}</span>
+                            @endif
+                        </div>
+                    </div>
+                @endforeach
             </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('img/projects/getmy_name.png') }}" alt="getmy.name"
-                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">getmy.name</h3>
-                    <p class="text-md text-orange-300 mb-4">API, Laravel, Portfolio</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        A free and open-source API by MTEX.dev to fetch and display your personal portfolio data,
-                        perfect for dynamic "about me" sections or custom portfolio sites.
-                    </p>
-                    <a href="https://getmy.name" target="_blank"
-                        class="text-orange-400 hover:text-orange-300 font-semibold flex items-center">
-                        Visit Website <i class="bi bi-box-arrow-up-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="300">
-                <img src="{{ asset('img/projects/gimy-site.png') }}" alt="gimy.site"
-                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">gimy.site</h3>
-                    <p class="text-md text-violet-500 mb-4">Free Website Host, Laravel</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        Gimy.site is a rapid-deployment platform by MTEX.dev for static websites. Write HTML, CSS, and
-                        JS for multiple pages and publish your sites instantly.
-                    </p>
-                    <a href="https://gimy.site" target="_blank"
-                        class="text-violet-400 hover:text-violet-300 font-semibold flex items-center">
-                        Visit Website <i class="bi bi-box-arrow-up-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="400">
-                <img src="{{ asset('img/projects/xpsystems.png') }}" alt="XP Systems"
-                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">XP Systems</h3>
-                    <p class="text-md text-indigo-300 mb-4">Laravel, Hosting Solutions</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        The official launch of XPsystems.eu, building open-source Laravel tools, custom hosting
-                        solutions, and robust backend services.
-                    </p>
-                    <a href="https://xpsystems.eu" target="_blank"
-                        class="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center">
-                        Visit Website <i class="bi bi-box-arrow-up-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="500">
-                <img src="{{ asset('img/projects/europehost.png') }}" alt="EuropeHost.eu"
-                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">EuropeHost.eu</h3>
-                    <p class="text-md text-purple-300 mb-4">Hosting Platform, Backend</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        Part of XP Systems' offerings, providing custom hosting solutions with a focus on robust backend
-                        infrastructure.
-                    </p>
-                    <a href="https://europehost.eu" target="_blank"
-                        class="text-purple-400 hover:text-purple-300 font-semibold flex items-center">
-                        Visit Website <i class="bi bi-box-arrow-up-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="600">
-                <img src="{{ asset('img/projects/xphost.png') }}" alt="XP-Host.de"
-                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">XP-Host.de</h3>
-                    <p class="text-md text-green-300 mb-4">Linux, Pterodactyl (Laravel-based)</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        Launched a free Minecraft hosting platform built on Pterodactyl, showcasing experience with game
-                        server management and custom web interfaces.
-                    </p>
-                    <a href="https://gamepanel.xp-host.de" target="_blank"
-                        class="text-green-400 hover:text-green-300 font-semibold flex items-center">
-                        Visit Gamepanel <i class="bi bi-box-arrow-up-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="700">
-                <img src="{{ asset('img/projects/yourlink.png') }}" alt="yourlink.app"
-                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">yourlink.app</h3>
-                    <p class="text-md text-blue-300 mb-4">Link Management, SaaS, Analytics</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        A simple, privacy-friendly link management platform with short links, statistics, and custom
-                        branding for personal or business use.
-                    </p>
-                    <a href="https://yourlink.app" target="_blank"
-                        class="text-blue-400 hover:text-blue-300 font-semibold flex items-center">
-                        Visit Website <i class="bi bi-box-arrow-up-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="800">
-                <img src="{{ asset('img/projects/dscpics.png') }}" alt="dsc.pics"
-                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">dsc.pics</h3>
-                    <p class="text-md text-pink-300 mb-4">Image Hosting, Direct Links</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        A fast, no-nonsense image hosting platform focused on Discord and forum-friendly sharing with
-                        direct link support.
-                    </p>
-                    <a href="https://dsc.pics" target="_blank"
-                        class="text-pink-400 hover:text-pink-300 font-semibold flex items-center">
-                        Visit Website <i class="bi bi-box-arrow-up-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="900">
-                <img src="{{ asset('img/projects/anlink.png') }}" alt="anlink.eu"
-                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">anlink.eu</h3>
-                    <p class="text-md text-green-300 mb-4">Shortlink Platform, Analytics</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        A minimalistic and efficient shortlink service with optional analytics, designed for personal
-                        use and privacy-focused sharing.
-                    </p>
-                    <a href="https://anlink.eu" target="_blank"
-                        class="text-green-400 hover:text-green-300 font-semibold flex items-center">
-                        Visit Website <i class="bi bi-box-arrow-up-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="900">
-                <img src="{{ asset('img/projects/moodfood.png') }}" alt="MoodFood"
-                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">MoodFood</h3>
-                    <p class="text-md text-blue-200 mb-4">Healthy Recipes Platform</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        A platform dedicated to healthy recipes, focusing on nutrition and well-being through curated
-                        meal ideas and cooking tips.
-                    </p>
-                    <a href="https://moodfood.hhgkl.de" target="_blank"
-                        class="text-blue-300 hover:text-blue-200 font-semibold flex items-center">
-                        Visit Website <i class="bi bi-box-arrow-up-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="900">
-                <img src="{{ asset('img/projects/kaufenhof.png') }}" alt="Kaufenhof"
-                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">Kaufenhof.de</h3>
-                    <p class="text-md text-purple-400 mb-4">Onlineshop</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        A online shopsystem with Barzahlung and abholung in-person for students of a school.
-                    </p>
-                    <a href="https://kaufenhof.de" target="_blank"
-                        class="text-purple-500 hover:text-purple-400 font-semibold flex items-center">
-                        Visit Website <i class="bi bi-box-arrow-up-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="1000">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">FahraApp (Carpooling)</h3>
-                    <p class="text-md text-yellow-300 mb-4">PHP, MySQL, Bootstrap, APIs</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        Collaborated on a school-based carpooling web app, integrating routing/geocoding APIs. A
-                        multi-year project showcasing teamwork and full-stack development.
-                    </p>
-                    <span class="text-gray-500 italic text-sm">School Project - Details available on request</span>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="1100">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">Django & Python Web App</h3>
-                    <p class="text-md text-cyan-300 mb-4">Python, Django</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        My first real project with Python and the Django framework, exploring backend capabilities
-                        beyond PHP for diverse development.
-                    </p>
-                    <span class="text-gray-500 italic text-sm">Code available on request</span>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="1200">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">MadGrower.de</h3>
-                    <p class="text-md text-orange-300 mb-4">MinecraftServer, Forum, Support</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        Joined the MadGrower.de team as a Web Developer, contributing to custom PHP development and
-                        seamless server integrations.
-                    </p>
-                    <!--a href="https://madgrower.de" target="_blank"
-                        class="text-orange-400 hover:text-orange-300 font-semibold flex items-center">
-                        Visit Website <i class="bi bi-box-arrow-up-right ml-2"></i>
-                    </a-->
-                    <span class="text-gray-500 italic text-sm">Site might be private or retired.</span>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="1300">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">XP-Craft.de</h3>
-                    <p class="text-md text-lime-300 mb-4">Minecraft Server, Custom PHP</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        Developed a custom PHP website for my Minecraft server after migrating from GitHub Pages,
-                        enhancing the user experience.
-                    </p>
-                    <span class="text-gray-500 italic text-sm">Site might be private or retired.</span>
-                </div>
-            </div>
-
-            {{--
-            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
-                data-aos="fade-up" data-aos-delay="1400">
-                <img src="{{ asset('img/projects/urlk.png') }}" alt="URLK.app"
-                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">URLK.app</h3>
-                    <p class="text-md text-red-300 mb-4">Link Shortener, URL Management</p>
-                    <p class="text-gray-300 text-base mb-4">
-                        A focused URL shortener for quick and efficient link management, offering a clean interface and
-                        reliable redirects.
-                    </p>
-                    <a href="https://urlk.app" target="_blank"
-                        class="text-red-400 hover:text-red-300 font-semibold flex items-center">
-                        Visit Website <i class="bi bi-box-arrow-up-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-            --}}
         </div>
-    </div>
-</section>
+    </section>
 @endsection
