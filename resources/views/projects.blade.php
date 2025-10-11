@@ -182,6 +182,41 @@
             </div>
 
             <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
+                data-aos="fade-up" data-aos-delay="900">
+                <img src="{{ asset('img/projects/moodfood.png') }}" alt="MoodFood"
+                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">MoodFood</h3>
+                    <p class="text-md text-blue-200 mb-4">Healthy Recipes Platform</p>
+                    <p class="text-gray-300 text-base mb-4">
+                        A platform dedicated to healthy recipes, focusing on nutrition and well-being through curated
+                        meal ideas and cooking tips.
+                    </p>
+                    <a href="https://moodfood.hhgkl.de" target="_blank"
+                        class="text-blue-300 hover:text-blue-200 font-semibold flex items-center">
+                        Visit Website <i class="bi bi-box-arrow-up-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
+                data-aos="fade-up" data-aos-delay="900">
+                <img src="{{ asset('img/projects/kaufenhof.png') }}" alt="Kaufenhof"
+                    class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">Kaufenhof.de</h3>
+                    <p class="text-md text-purple-400 mb-4">Onlineshop</p>
+                    <p class="text-gray-300 text-base mb-4">
+                        A online shopsystem with Barzahlung and abholung in-person for students of a school.
+                    </p>
+                    <a href="https://kaufenhof.de" target="_blank"
+                        class="text-purple-500 hover:text-purple-400 font-semibold flex items-center">
+                        Visit Website <i class="bi bi-box-arrow-up-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 project-card"
                 data-aos="fade-up" data-aos-delay="1000">
                 <div class="p-6">
                     <h3 class="text-2xl font-bold text-white mb-2">FahraApp (Carpooling)</h3>
