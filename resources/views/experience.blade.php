@@ -11,75 +11,107 @@
 @section('twitter_description', 'A timeline of my professional work and projects in backend and Laravel development.')
 
 @section('content')
-<section class="py-20 bg-gray-900">
-    <div class="container mx-auto px-6">
-        <h1 class="text-5xl font-extrabold text-center text-sky-400 mb-12" data-aos="fade-up">My Professional Journey & Projects</h1>
-
-        <div class="space-y-12">
-            <!-- Experience Item: Owner – XP Systems & EuropeHost -->
-            <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-500 hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
-                <h2 class="text-3xl font-bold text-white mb-2">Owner & Lead Developer</h2>
-                <p class="text-xl text-indigo-300 mb-4">XP Systems & EuropeHost</p>
-                <p class="text-md text-gray-400 mb-6">2025 – Present</p>
-                <ul class="list-disc list-inside text-lg text-gray-300 space-y-2">
-                    <li>Managing product strategy, team development, and deployment of custom software and hosting platforms.</li>
-                    <li>Specializing in scalable Laravel web apps: REST APIs, custom modules, and UUID-based databases.</li>
-                    <li>Focused on database design and optimization (MySQL), ensuring fast, reliable data access and structural integrity.</li>
-                    <li>Developing and releasing multiple open-source Laravel projects.</li>
-                    <li>Launched MTEX.dev, a platform offering minimal, powerful, and free tools for software planning and development.</li>
-                    <li>Registered xpsystems.eu and officially began building open-source Laravel tools, hosting solutions, and backend services (Jan 15, 2025).</li>
-                </ul>
-            </div>
-
-            <!-- Experience Item: Web Developer – MadGrower.de -->
-            <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-purple-500 hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
-                <h2 class="text-3xl font-bold text-white mb-2">Web Developer</h2>
-                <p class="text-xl text-purple-300 mb-4">MadGrower.de</p>
-                <p class="text-md text-gray-400 mb-6">May 2024 – Present</p>
-                <ul class="list-disc list-inside text-lg text-gray-300 space-y-2">
-                    <li>Joined the MadGrower.de team, focusing on custom PHP development and server integration.</li>
-                </ul>
-            </div>
-
-            <!-- Experience Item: XP-Host.de – Minecraft Hosting Platform -->
-            <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-green-500 hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
-                <h2 class="text-3xl font-bold text-white mb-2">Founder & Developer</h2>
-                <p class="text-xl text-green-300 mb-4">XP-Host.de (Minecraft Hosting Platform)</p>
-                <p class="text-md text-gray-400 mb-6">Oct 2024</p>
-                <ul class="list-disc list-inside text-lg text-gray-300 space-y-2">
-                    <li>Launched a Pterodactyl (Laravel)-based free Minecraft hosting platform.</li>
-                </ul>
-            </div>
-
-            <!-- Experience Item: HHGkl.de/FahraApp – Carpooling WebApp -->
-            <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-yellow-500 hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="400">
-                <h2 class="text-3xl font-bold text-white mb-2">Co-Developer & Maintainer</h2>
-                <p class="text-xl text-yellow-300 mb-4">HHGkl.de/FahraApp (Carpooling WebApp)</p>
-                <p class="text-md text-gray-400 mb-6">2023 – 2025</p>
-                <ul class="list-disc list-inside text-lg text-gray-300 space-y-2">
-                    <li>Collaborated on a school-based carpooling web app using PHP, MySQL, Bootstrap, Bootstrap Icons, and FontAwesome.</li>
-                    <li>Integrated GraphHopper's Routing API, Maps.co geocoding API, and OpenStreetMap.</li>
-                    <li>Hosted and maintained the platform over multiple years as part of the Telekom Foundation-funded JIA (Junior Engineer Academy).</li>
-                </ul>
-            </div>
-
-            <!-- Experience Item: Early Web Projects (Grouped) -->
-            <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-red-500 hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="500">
-                <h2 class="text-3xl font-bold text-white mb-2">Early Web Development Endeavors</h2>
-                <p class="text-xl text-red-300 mb-4">Self-Initiated Projects</p>
-                <p class="text-md text-gray-400 mb-6">2023 – 2024</p>
-                <ul class="list-disc list-inside text-lg text-gray-300 space-y-2">
-                    <li>**2024:** Registered <span class="text-orange-300">xp-craft.de</span> and developed a custom PHP website for my Minecraft server.</li>
-                    <li>**Early 2024:** Built the XP-Craft Minecraft server website on <span class="text-orange-300">GitHub Pages</span>, later deploying to a custom domain.</li>
-                    <li>**2023:** Created my first web project in school during Informatik-Unterricht, sparking my interest in web development.</li>
-                </ul>
-            </div>
-
+<section class="py-20 bg-slate-900 min-h-screen">
+    <div class="container mx-auto px-6 max-w-7xl">
+        <div class="mb-16" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                Professional Journey
+            </h1>
+            <p class="text-xl text-gray-400 max-w-3xl">
+                A structured overview of my professional growth, key roles, and impactful projects that define my expertise in web development.
+            </p>
         </div>
 
-        <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="600">
-            <a href="{{ route('projects') }}" class="inline-block bg-gradient-to-r from-green-500 to-teal-500 text-white text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                See My Projects <i class="bi bi-arrow-right ml-2"></i>
+        @php
+            $experiences = [
+                [
+                    'title' => 'Owner & Lead Developer',
+                    'company' => 'XP Systems & EuropeHost',
+                    'duration' => 'January 2025 – Present',
+                    'description' => [
+                        'Spearheaded product strategy, team leadership, and deployment of innovative custom software and hosting solutions.',
+                        'Developed scalable Laravel web applications, including robust REST APIs and custom modules utilizing UUID-based database architectures.',
+                        'Designed and optimized MySQL databases, ensuring high performance, reliability, and data integrity across all platforms.',
+                        'Initiated and released multiple open-source Laravel projects, fostering community contribution and demonstrating best practices.',
+                        'Launched MTEX.dev, a platform dedicated to providing minimal, powerful, and free tools for streamlined software planning and development.',
+                        'Established xpsystems.eu to formally house open-source Laravel tools, specialized hosting services, and comprehensive backend solutions.',
+                    ],
+                    'delay' => '100',
+                ],
+                [
+                    'title' => 'Web Developer',
+                    'company' => 'MadGrower.de',
+                    'duration' => 'May 2024 – Present',
+                    'description' => [
+                        'Contributed to the MadGrower.de development team, focusing on bespoke PHP solutions and seamless server integrations.',
+                    ],
+                    'delay' => '200',
+                ],
+                [
+                    'title' => 'Founder & Developer',
+                    'company' => 'XP-Host.de (Minecraft Hosting Platform)',
+                    'duration' => 'October 2024',
+                    'description' => [
+                        'Engineered and launched a free Minecraft hosting platform, leveraging the Laravel-based Pterodactyl panel for advanced game server management.',
+                    ],
+                    'delay' => '300',
+                ],
+                [
+                    'title' => 'Co-Developer & Maintainer',
+                    'company' => 'HHGkl.de/FahraApp (Carpooling WebApp)',
+                    'duration' => '2023 – 2025',
+                    'description' => [
+                        'Collaborated on the development of a school-centric carpooling web application, utilizing PHP, MySQL, Bootstrap, Bootstrap Icons, and FontAwesome for a robust user experience.',
+                        'Integrated advanced third-party APIs including GraphHopper\'s Routing API, Maps.co geocoding API, and OpenStreetMap for comprehensive navigation and location services.',
+                        'Managed and maintained the platform over several years, a project proudly supported by the Telekom Foundation\'s Junior Engineer Academy (JIA) program.',
+                    ],
+                    'delay' => '400',
+                ],
+                [
+                    'title' => 'Early Web Development Endeavors',
+                    'company' => 'Self-Initiated Projects',
+                    'duration' => '2023 – 2024',
+                    'description' => [
+                        '**2024:** Established <span class="text-blue-300">xp-craft.de</span> and developed a customized PHP website to enhance the user experience of my Minecraft server.',
+                        '**Early 2024:** Designed and implemented the XP-Craft Minecraft server website on <span class="text-blue-300">GitHub Pages</span>, later transitioning to a dedicated custom domain for professional hosting.',
+                        '**2023:** Developed my foundational web project during an Informatik-Unterricht course, marking the inception of my profound interest in web development.',
+                    ],
+                    'delay' => '500',
+                ],
+            ];
+        @endphp
+
+        <div class="space-y-8">
+            @foreach ($experiences as $experience)
+                <div class="group bg-slate-800 p-8 rounded-lg shadow-md border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg flex flex-col"
+                    data-aos="fade-up" data-aos-delay="{{ $experience['delay'] }}">
+                    <h2 class="text-3xl font-bold text-white mb-1">
+                        {{ $experience['title'] }}
+                    </h2>
+                    <p class="text-xl text-blue-400 mb-3">
+                        {{ $experience['company'] }}
+                    </p>
+                    <p class="text-base text-gray-400 mb-6">
+                        {{ $experience['duration'] }}
+                    </p>
+                    <ul class="list-disc list-inside text-lg text-gray-300 space-y-2">
+                        @foreach ($experience['description'] as $item)
+                            <li>{!! $item !!}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endforeach
+        </div>
+
+        <div class="text-center mt-20 border-t border-slate-800 pt-16" data-aos="fade-up" data-aos-delay="600">
+            <h3 class="text-3xl font-bold text-white mb-4">Ready to explore my work?</h3>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                These experiences have provided a robust foundation and shaped my expertise in web development. Explore my diverse portfolio to see how these skills translate into tangible results.
+            </p>
+            <a href="{{ route('projects') }}"
+               class="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-lg">
+                View My Projects
+                <i class="bi bi-arrow-right"></i>
             </a>
         </div>
     </div>
