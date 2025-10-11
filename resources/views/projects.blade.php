@@ -11,17 +11,16 @@
 @section('twitter_description', 'Dive into my portfolio of web development and software engineering projects.')
 
 @section('content')
-    <section class="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 min-h-screen">
-        <div class="container mx-auto px-6">
+    <section class="py-20 bg-slate-900 min-h-screen">
+        <div class="container mx-auto px-6 max-w-7xl">
             <!-- Header Section -->
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h1 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-4">
-                    Project Portfolio
+            <div class="mb-16" data-aos="fade-up">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                    Projects
                 </h1>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    A curated collection of web applications, platforms, and tools built with modern technologies and best practices.
+                <p class="text-xl text-gray-400 max-w-3xl">
+                    A collection of web applications, platforms, and tools showcasing expertise in backend development, API design, and scalable system architecture.
                 </p>
-                <div class="mt-6 h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
             </div>
 
             @php
@@ -32,7 +31,7 @@
                         'tech_stack' => 'Laravel, Custom Tools, Custom API',
                         'description' => 'A platform offering minimal, powerful, and free tools for software planning and development. MTEX focuses on reducing friction in early development from intuitive database modeling to intelligent dev utilities.',
                         'url' => 'https://mtex.dev',
-                        'color_class' => 'from-pink-500 to-rose-500',
+                        'accent_color' => 'blue',
                         'delay' => '100',
                     ],
                     [
@@ -41,7 +40,7 @@
                         'tech_stack' => 'API, Laravel, Portfolio',
                         'description' => 'A free and open-source API by MTEX.dev to fetch and display your personal portfolio data, perfect for dynamic "about me" sections or custom portfolio sites.',
                         'url' => 'https://getmy.name',
-                        'color_class' => 'from-orange-500 to-amber-500',
+                        'accent_color' => 'blue',
                         'delay' => '200',
                     ],
                     [
@@ -50,7 +49,7 @@
                         'tech_stack' => 'Free Website Host, Laravel',
                         'description' => 'Gimy.site is a rapid-deployment platform by MTEX.dev for static websites. Write HTML, CSS, and JS for multiple pages and publish your sites instantly.',
                         'url' => 'https://gimy.site',
-                        'color_class' => 'from-violet-500 to-purple-500',
+                        'accent_color' => 'blue',
                         'delay' => '300',
                     ],
                     [
@@ -59,7 +58,7 @@
                         'tech_stack' => 'Laravel, Hosting Solutions',
                         'description' => 'The official launch of XPsystems.eu, building open-source Laravel tools, custom hosting solutions, and robust backend services.',
                         'url' => 'https://xpsystems.eu',
-                        'color_class' => 'from-indigo-500 to-blue-500',
+                        'accent_color' => 'blue',
                         'delay' => '400',
                     ],
                     [
@@ -68,7 +67,7 @@
                         'tech_stack' => 'Hosting Platform, Backend',
                         'description' => "Part of XP Systems' offerings, providing custom hosting solutions with a focus on robust backend infrastructure.",
                         'url' => 'https://europehost.eu',
-                        'color_class' => 'from-purple-500 to-indigo-500',
+                        'accent_color' => 'blue',
                         'delay' => '500',
                     ],
                     [
@@ -78,7 +77,7 @@
                         'description' => 'Launched a free Minecraft hosting platform built on Pterodactyl, showcasing experience with game server management and custom web interfaces.',
                         'url' => 'https://gamepanel.xp-host.de',
                         'url_text' => 'Visit Gamepanel',
-                        'color_class' => 'from-green-500 to-emerald-500',
+                        'accent_color' => 'blue',
                         'delay' => '600',
                     ],
                     [
@@ -87,7 +86,7 @@
                         'tech_stack' => 'Link Management, SaaS, Analytics',
                         'description' => 'A simple, privacy-friendly link management platform with short links, statistics, and custom branding for personal or business use.',
                         'url' => 'https://yourlink.app',
-                        'color_class' => 'from-blue-500 to-cyan-500',
+                        'accent_color' => 'blue',
                         'delay' => '700',
                     ],
                     [
@@ -96,7 +95,7 @@
                         'tech_stack' => 'Image Hosting, Direct Links',
                         'description' => 'A fast, no-nonsense image hosting platform focused on Discord and forum-friendly sharing with direct link support.',
                         'url' => 'https://dsc.pics',
-                        'color_class' => 'from-pink-500 to-fuchsia-500',
+                        'accent_color' => 'blue',
                         'delay' => '800',
                     ],
                     [
@@ -105,7 +104,7 @@
                         'tech_stack' => 'Shortlink Platform, Analytics',
                         'description' => 'A minimalistic and efficient shortlink service with optional analytics, designed for personal use and privacy-focused sharing.',
                         'url' => 'https://anlink.eu',
-                        'color_class' => 'from-green-500 to-teal-500',
+                        'accent_color' => 'blue',
                         'delay' => '900',
                     ],
                     [
@@ -114,7 +113,7 @@
                         'tech_stack' => 'Healthy Recipes Platform',
                         'description' => 'A platform dedicated to healthy recipes, focusing on nutrition and well-being through curated meal ideas and cooking tips.',
                         'url' => 'https://moodfood.hhgkl.de',
-                        'color_class' => 'from-blue-400 to-cyan-400',
+                        'accent_color' => 'blue',
                         'delay' => '1000',
                     ],
                     [
@@ -123,7 +122,7 @@
                         'tech_stack' => 'Onlineshop',
                         'description' => 'An online shop system with cash payment and in-person pickup for students of a school.',
                         'url' => 'https://kaufenhof.de',
-                        'color_class' => 'from-purple-500 to-pink-500',
+                        'accent_color' => 'blue',
                         'delay' => '1100',
                     ],
                     [
@@ -133,7 +132,7 @@
                         'description' => 'Collaborated on a school-based carpooling web app, integrating routing/geocoding APIs. A multi-year project showcasing teamwork and full-stack development.',
                         'url' => null,
                         'url_text' => 'School Project - Details available on request',
-                        'color_class' => 'from-yellow-500 to-orange-500',
+                        'accent_color' => 'blue',
                         'delay' => '1200',
                     ],
                     [
@@ -143,7 +142,7 @@
                         'description' => 'My first real project with Python and the Django framework, exploring backend capabilities beyond PHP for diverse development.',
                         'url' => null,
                         'url_text' => 'Code available on request',
-                        'color_class' => 'from-cyan-500 to-blue-500',
+                        'accent_color' => 'blue',
                         'delay' => '1300',
                     ],
                     [
@@ -153,7 +152,7 @@
                         'description' => 'Joined the MadGrower.de team as a Web Developer, contributing to custom PHP development and seamless server integrations.',
                         'url' => null,
                         'url_text' => 'Site might be private or retired.',
-                        'color_class' => 'from-orange-500 to-red-500',
+                        'accent_color' => 'blue',
                         'delay' => '1400',
                     ],
                     [
@@ -163,104 +162,78 @@
                         'description' => 'Developed a custom PHP website for my Minecraft server after migrating from GitHub Pages, enhancing the user experience.',
                         'url' => null,
                         'url_text' => 'Site might be private or retired.',
-                        'color_class' => 'from-lime-500 to-green-500',
+                        'accent_color' => 'blue',
                         'delay' => '1500',
                     ],
                 ];
             @endphp
 
             <!-- Projects Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach ($projects as $project)
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 hover:border-slate-600 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 transform hover:-translate-y-2"
+                    <div class="group bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:shadow-xl flex flex-col"
                         data-aos="fade-up" data-aos-delay="{{ $project['delay'] }}">
                         
-                        <!-- Gradient Overlay on Hover -->
-                        <div class="absolute inset-0 bg-gradient-to-br {{ $project['color_class'] }} opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none"></div>
-                        
                         @if ($project['image'])
-                            <div class="relative h-48 overflow-hidden bg-slate-800">
+                            <div class="relative h-48 overflow-hidden bg-slate-700">
                                 <img src="{{ asset('img/projects/' . $project['image']) }}" 
                                      alt="{{ $project['name'] }}"
-                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                                <!-- Gradient overlay on image -->
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60"></div>
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                             </div>
                         @else
-                            <div class="h-48 bg-gradient-to-br {{ $project['color_class'] }} flex items-center justify-center">
-                                <i class="bi bi-code-slash text-6xl text-white opacity-30"></i>
+                            <div class="h-48 bg-slate-700 flex items-center justify-center">
+                                <i class="bi bi-code-slash text-5xl text-slate-500"></i>
                             </div>
                         @endif
                         
-                        <div class="p-6 relative">
+                        <div class="p-6 flex flex-col flex-grow">
                             <!-- Project Name -->
-                            <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r {{ $project['color_class'] }} transition-all duration-300">
+                            <h3 class="text-xl font-bold text-white mb-2">
                                 {{ $project['name'] }}
                             </h3>
                             
-                            <!-- Tech Stack Badge -->
-                            <div class="inline-block mb-4">
-                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-gradient-to-r {{ $project['color_class'] }} text-white shadow-lg">
-                                    {{ $project['tech_stack'] }}
-                                </span>
-                            </div>
+                            <!-- Tech Stack -->
+                            <p class="text-sm text-blue-400 mb-4 font-medium">
+                                {{ $project['tech_stack'] }}
+                            </p>
                             
                             <!-- Description -->
-                            <p class="text-gray-300 text-sm leading-relaxed mb-6 line-clamp-4">
+                            <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
                                 {{ $project['description'] }}
                             </p>
                             
                             <!-- Link/Button -->
-                            <div class="pt-4 border-t border-slate-700/50">
+                            <div class="pt-4 border-t border-slate-700">
                                 @if ($project['url'])
                                     <a href="{{ $project['url'] }}" 
                                        target="_blank"
-                                       class="inline-flex items-center gap-2 text-sm font-semibold text-gray-300 hover:text-white transition-colors duration-300 group/link">
-                                        <span class="bg-gradient-to-r {{ $project['color_class'] }} bg-clip-text text-transparent group-hover/link:text-white transition-all duration-300">
-                                            {{ $project['url_text'] ?? 'Visit Website' }}
-                                        </span>
-                                        <i class="bi bi-arrow-up-right text-gray-400 group-hover/link:text-white group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-all duration-300"></i>
+                                       class="inline-flex items-center gap-2 text-sm font-semibold text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                                        {{ $project['url_text'] ?? 'Visit Website' }}
+                                        <i class="bi bi-arrow-right transition-transform duration-200 group-hover:translate-x-1"></i>
                                     </a>
                                 @else
-                                    <span class="text-xs text-gray-500 italic flex items-center gap-2">
-                                        <i class="bi bi-lock-fill"></i>
+                                    <span class="text-xs text-gray-500 italic">
                                         {{ $project['url_text'] }}
                                     </span>
                                 @endif
                             </div>
                         </div>
-                        
-                        <!-- Decorative Corner Element -->
-                        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br {{ $project['color_class'] }} opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-500"></div>
                     </div>
                 @endforeach
             </div>
 
-            <!-- Call to Action Section -->
-            <div class="mt-20 text-center" data-aos="fade-up" data-aos-delay="1600">
-                <div class="inline-block p-8 bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">
-                    <h3 class="text-2xl font-bold text-white mb-3">Have a Project in Mind?</h3>
-                    <p class="text-gray-300 mb-6 max-w-md">
-                        Let's collaborate and build something amazing together.
-                    </p>
-                    <a href="{{ route('contact') }}" 
-                       class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                        Get in Touch
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
+            <!-- Contact Section -->
+            <div class="mt-20 text-center border-t border-slate-800 pt-16" data-aos="fade-up" data-aos-delay="1600">
+                <h3 class="text-3xl font-bold text-white mb-4">Interested in Working Together?</h3>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                </p>
+                <a href="{{ route('contact') }}" 
+                   class="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-lg">
+                    Get in Touch
+                    <i class="bi bi-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
-@endsection
-
-@section('scripts')
-<style>
-    .line-clamp-4 {
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-</style>
 @endsection
