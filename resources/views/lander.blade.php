@@ -10,35 +10,39 @@
 @section('twitter_title', 'Fabian Ternis | Laravel Developer')
 @section('twitter_description', 'My professional portfolio showcasing projects in Laravel, backend development, and open-source contributions.')
 @section('content')
-<section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+<section class="relative h-screen flex items-center justify-center text-center overflow-hidden bg-slate-900">
     <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/img/hero-bg.png');">
-        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="absolute inset-0 bg-black opacity-70"></div>
     </div>
-    <div class="relative z-10 p-6 max-w-4xl mx-auto">
-        <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-6 text-indigo-400" data-aos="fade-up">
+    <div class="relative z-10 p-6 max-w-5xl mx-auto">
+        <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-6 text-blue-400" data-aos="fade-up">
             Fabian Ternis
         </h1>
-        <p class="text-3xl md:text-4xl text-gray-200 mb-8 font-light type-effect" data-text="Laravel Developer" data-aos="fade-up" data-aos-delay="300">
+        <p class="text-3xl md:text-4xl text-gray-200 mb-8 font-light type-effect" data-text="Laravel & Backend Developer" data-aos="fade-up" data-aos-delay="300">
             <!-- Text will be typed by JS -->
         </p>
-        <a href="{{ route('projects') }}" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xl px-10 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
+        <a href="{{ route('projects') }}"
+           class="inline-flex items-center gap-2 px-10 py-4 bg-blue-600 text-white font-semibold text-xl rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300" data-aos="fade-up" data-aos-delay="600">
             View My Work
+            <i class="bi bi-arrow-right"></i>
         </a>
     </div>
 </section>
 
-<section class="py-20 bg-gray-900 text-center">
-    <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-fuchsia-400 mb-8" data-aos="fade-up">Hello, I'm Fabian!</h2>
-        <p class="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+<section class="py-20 bg-slate-900 text-center">
+    <div class="container mx-auto px-6 max-w-7xl">
+        <h2 class="text-4xl font-bold text-white mb-8" data-aos="fade-up">Hello, I'm Fabian!</h2>
+        <p class="text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
             I'm a passionate Laravel & Backend Developer, specializing in creating robust web applications, optimizing databases, and building powerful software tools. I love turning complex ideas into simple, high-performance digital solutions.
         </p>
         <div class="mt-10 flex justify-center space-x-6" data-aos="fade-up" data-aos-delay="400">
-            <a href="{{ route('experience') }}" class="text-indigo-400 hover:text-indigo-300 transition-colors duration-300 text-lg">
-                <i class="bi bi-briefcase mr-2"></i>My Journey
+            <a href="{{ route('experience') }}"
+               class="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 text-blue-400 font-medium rounded-lg hover:bg-slate-700 hover:text-blue-300 transition-colors duration-300">
+                <i class="bi bi-briefcase"></i>My Journey
             </a>
-            <a href="{{ route('contact') }}" class="text-purple-400 hover:text-purple-300 transition-colors duration-300 text-lg">
-                <i class="bi bi-envelope mr-2"></i>Get In Touch
+            <a href="{{ route('contact') }}"
+               class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                <i class="bi bi-envelope"></i>Get In Touch
             </a>
         </div>
     </div>
@@ -64,7 +68,7 @@
                 }
             }
             typeEffectElement.textContent = '';
-            setTimeout(typeWriter, 1250);
+            setTimeout(typeWriter, 125);
         }
     });
 </script>
