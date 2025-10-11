@@ -11,116 +11,74 @@
 @section('twitter_description', 'The essential tools and technologies in my web development arsenal.')
 
 @section('content')
-<section class="py-20 bg-gray-900">
-    <div class="container mx-auto px-6">
-        <h1 class="text-5xl font-extrabold text-center text-blue-300 mb-12" data-aos="fade-up">My Toolbox</h1>
+<section class="py-20 bg-slate-900 min-h-screen">
+    <div class="container mx-auto px-6 max-w-7xl">
+        <div class="mb-16" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                My Toolbox
+            </h1>
+            <p class="text-xl text-gray-400 max-w-3xl">
+                A collection of programming languages, frameworks, and tools I leverage to build robust and scalable web applications.
+            </p>
+        </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+        @php
+            $tools = [
+                ['name' => 'PHP', 'icon' => 'filetype-php', 'color' => 'purple-500', 'category' => 'Backend Language', 'delay' => '100'],
+                ['name' => 'Laravel', 'icon' => 'stack', 'color' => 'red-500', 'category' => 'PHP Framework', 'delay' => '150'],
+                ['name' => 'HTML', 'icon' => 'filetype-html', 'color' => 'orange-500', 'category' => 'Markup Language', 'delay' => '200'],
+                ['name' => 'CSS', 'icon' => 'filetype-css', 'color' => 'blue-500', 'category' => 'Styling Language', 'delay' => '250'],
+                ['name' => 'JavaScript', 'icon' => 'filetype-js', 'color' => 'yellow-300', 'category' => 'Scripting Language', 'delay' => '300'],
+                ['name' => 'MySQL', 'icon' => 'database', 'color' => 'indigo-500', 'category' => 'Database Management', 'delay' => '350'],
+                ['name' => 'API Dev & Integration', 'icon' => 'broadcast', 'color' => 'pink-500', 'category' => 'Connectivity', 'delay' => '400'],
+                ['name' => 'Python', 'icon' => 'filetype-py', 'color' => 'blue-300', 'category' => 'Programming Language', 'delay' => '450'],
+                ['name' => 'Django', 'icon' => 'lightning-charge', 'color' => 'green-400', 'category' => 'Python Framework', 'delay' => '500'],
+                ['name' => 'Git', 'icon' => 'git', 'color' => 'red-500', 'category' => 'Version Control', 'delay' => '550'],
+                ['name' => 'Tailwind CSS', 'icon' => 'magic', 'color' => 'cyan-500', 'category' => 'CSS Framework', 'delay' => '600'],
+                ['name' => 'Bootstrap', 'icon' => 'bootstrap', 'color' => 'violet-500', 'category' => 'CSS Framework', 'delay' => '650'],
+                ['name' => 'VS Code', 'icon' => 'code-slash', 'color' => 'blue-500', 'category' => 'Code Editor', 'delay' => '700'],
+                ['name' => 'Plesk', 'icon' => 'cloud-arrow-up', 'color' => 'lime-500', 'category' => 'Server Panel', 'delay' => '750'],
+                ['name' => 'Docker', 'icon' => 'box', 'color' => 'blue-400', 'category' => 'Containerization', 'delay' => '800'],
+                ['name' => 'Linux', 'icon' => 'ubuntu', 'color' => 'orange-600', 'category' => 'Operating System', 'delay' => '850'],
+            ];
+        @endphp
 
-            <!-- Tool Item: PHP -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="100">
-                <i class="bi bi-filetype-php text-6xl text-purple-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">PHP</h3>
-                <p class="text-gray-400 text-sm">Backend Language</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            @foreach ($tools as $tool)
+                <div class="group bg-slate-800 rounded-lg p-6 text-center border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:shadow-xl flex flex-col items-center justify-center"
+                    data-aos="zoom-in" data-aos-delay="{{ $tool['delay'] }}">
+                    <i class="bi bi-{{ $tool['icon'] }} text-6xl text-{{ $tool['color'] }} mb-4 transition-transform duration-300 group-hover:scale-110"></i>
+                    <h3 class="text-xl font-bold text-white mb-1">
+                        {{ $tool['name'] }}
+                    </h3>
+                    <p class="text-gray-400 text-sm">
+                        {{ $tool['category'] }}
+                    </p>
+                </div>
+            @endforeach
+
+            <div class="group bg-slate-800 rounded-lg p-6 text-center border border-slate-700 opacity-70 cursor-not-allowed flex flex-col items-center justify-center"
+                data-aos="zoom-in" data-aos-delay="900">
+                <i class="bi bi-question-circle text-6xl text-slate-500 mb-4"></i>
+                <h3 class="text-xl font-bold text-gray-400 mb-1">
+                    More Coming Soon
+                </h3>
+                <p class="text-gray-500 text-sm">
+                    Always Learning!
+                </p>
             </div>
+        </div>
 
-            <!-- Tool Item: Laravel -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="150">
-                <i class="bi bi-stack text-6xl text-red-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">Laravel</h3>
-                <p class="text-gray-400 text-sm">PHP Framework</p>
-            </div>
-
-            <!-- Tool Item: HTML -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="200">
-                <i class="bi bi-filetype-html text-6xl text-orange-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">HTML</h3>
-                <p class="text-gray-400 text-sm">Markup Language</p>
-            </div>
-
-            <!-- Tool Item: CSS -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="250">
-                <i class="bi bi-filetype-css text-6xl text-blue-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">CSS</h3>
-                <p class="text-gray-400 text-sm">Styling Language</p>
-            </div>
-
-            <!-- Tool Item: JavaScript -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="300">
-                <i class="bi bi-filetype-js text-6xl text-yellow-300 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">JavaScript</h3>
-                <p class="text-gray-400 text-sm">Scripting Language</p>
-            </div>
-
-            <!-- Tool Item: MySQL -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="350">
-                <i class="bi bi-database text-6xl text-indigo-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">MySQL</h3>
-                <p class="text-gray-400 text-sm">Database Management</p>
-            </div>
-
-            <!-- Tool Item: API Development & Integration -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="400">
-                <i class="bi bi-broadcast text-6xl text-pink-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">API Dev & Integration</h3>
-                <p class="text-gray-400 text-sm">Connectivity</p>
-            </div>
-
-            <!-- Tool Item: Python -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="450">
-                <i class="bi bi-filetype-py text-6xl text-blue-300 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">Python</h3>
-                <p class="text-gray-400 text-sm">Programming Language</p>
-            </div>
-
-            <!-- Tool Item: Django -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="500">
-                <i class="bi bi-lightning-charge text-6xl text-green-400 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">Django</h3>
-                <p class="text-gray-400 text-sm">Python Framework</p>
-            </div>
-
-            <!-- Tool Item: Git -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="550">
-                <i class="bi bi-git text-6xl text-red-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">Git</h3>
-                <p class="text-gray-400 text-sm">Version Control</p>
-            </div>
-
-            <!-- Tool Item: Tailwind CSS -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="600">
-                <i class="bi bi-magic text-6xl text-cyan-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">Tailwind CSS</h3>
-                <p class="text-gray-400 text-sm">CSS Framework</p>
-            </div>
-
-            <!-- Tool Item: Bootstrap -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="650">
-                <i class="bi bi-bootstrap text-6xl text-violet-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">Bootstrap</h3>
-                <p class="text-gray-400 text-sm">CSS Framework</p>
-            </div>
-
-            <!-- Tool Item: VS Code -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="700">
-                <i class="bi bi-code-slash text-6xl text-blue-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">VS Code</h3>
-                <p class="text-gray-400 text-sm">Code Editor</p>
-            </div>
-
-            <!-- Tool Item: Plesk -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 tool-card" data-aos="zoom-in" data-aos-delay="750">
-                <i class="bi bi-cloud-arrow-up text-6xl text-lime-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white">Plesk</h3>
-                <p class="text-gray-400 text-sm">Server Panel</p>
-            </div>
-
-            <!-- Placeholder Card -->
-            <div class="bg-gray-800 p-6 rounded-lg text-center shadow-xl opacity-50 cursor-not-allowed">
-                <i class="bi bi-question-circle text-6xl text-gray-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-gray-400">More Coming Soon</h3>
-                <p class="text-gray-500 text-sm">Continue Learning!</p>
-            </div>
+        <div class="mt-20 text-center border-t border-slate-800 pt-16" data-aos="fade-up" data-aos-delay="1000">
+            <h3 class="text-3xl font-bold text-white mb-4">Have a tool in mind?</h3>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                My passion for learning drives me to constantly expand my toolkit. If you have an interesting technology you'd like to discuss, feel free to reach out.
+            </p>
+            <a href="{{ route('contact') }}"
+               class="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-lg">
+                Get in Touch
+                <i class="bi bi-arrow-right"></i>
+            </a>
         </div>
     </div>
 </section>
