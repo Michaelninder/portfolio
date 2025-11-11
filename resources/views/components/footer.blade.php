@@ -5,10 +5,16 @@
         <div class="flex items-center space-x-2">
             <span>&copy; {{ date('Y') }} Fabian Ternis</span>
             <span>|</span>
-            <a href="{{ route('imprint') }}" class="hover:underline">{{ __('legal.imprint.title') }}</a>
+            <a href="{{ route('imprint') }}" class="hover:underline">
+                {{ __('Imprint') }}
+            </a>
+            <span>|</span>
+            <a href="{{ route('privacy') }}" class="hover:underline">
+                {{ __('Privacy') }}
+            </a>
         </div>
 
-        {{-- Center Section (Optional Quote or Tagline) --}}
+        {{-- Center Section --}}
         <div class="text-center">
             <span>{{ __('footer.tagline', ['name' => 'Fabian Ternis']) }}</span>
         </div>
@@ -29,7 +35,6 @@
 </footer>
 
 <script>
-    // Re-render icons when component loaded
     document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     });

@@ -22,3 +22,4 @@ Route::view('/projects', 'projects')->name('projects');
 Route::view('/contact', 'contact')->name('contact');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 Route::view('/imprint', 'imprint')->name('imprint');
+Route::view('/privacy', 'privacy')->name('privacy');

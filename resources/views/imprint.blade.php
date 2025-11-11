@@ -1,39 +1,61 @@
 @extends('layouts.app')
-@section('title', 'Imprint')
+@section('title', 'Imprint / Impressum')
 
 @section('meta_title', 'Imprint / Impressum - Fabian Ternis')
 @section('meta_description', 'Legal notice and imprint for Fabian Ternis\'s online presence, including contact information and a list of managed websites.')
 @section('meta_keywords', 'Imprint, Impressum, Fabian Ternis, XP Systems, MTEX.dev, contact, legal notice, Flörsheim-Dalsheim')
 
-@section('og_title', 'Imprint for Fabian Ternis\'s Websites')
-@section('og_description', 'Full legal information and contact details for Fabian Ternis and associated web properties.')
-@section('twitter_title', 'Fabian Ternis | Imprint')
-@section('twitter_description', 'Legal information for Fabian Ternis\'s web projects.')
-
 @section('content')
 <section class="py-20 bg-gray-900 min-h-screen">
     <div class="container mx-auto px-6 max-w-3xl">
-        <h1 class="text-5xl font-extrabold text-center text-amber-400 mb-12" data-aos="fade-up">Imprint / Impressum</h1>
+        <h1 class="text-5xl font-extrabold text-center text-amber-400 mb-12" data-aos="fade-up">Imprint /
+            Impressum</h1>
 
-        <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-yellow-500" data-aos="fade-up" data-aos-delay="200">
-            <h2 class="text-3xl font-bold text-white mb-4">Information according to § 5 TMG</h2>
-            <p class="text-lg text-gray-300 mb-6">
+        <!-- English version -->
+        <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-yellow-500" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-white mb-2">Imprint / Legal Notice (English)</h2>
+            <p class="text-lg text-gray-300 mb-4">
+                Provider / Operator:<br>
                 Fabian Elias Ternis<br>
                 Alzeyer Str. 97<br>
                 67592 Flörsheim-Dalsheim<br>
                 Germany
             </p>
 
-            <h2 class="text-3xl font-bold text-white mb-4">Contact</h2>
-            <p class="text-lg text-gray-300 mb-6">
-                Email: <a href="mailto:f.ternis@xpsystems.eu" class="text-blue-400 hover:underline">f.ternis@xpsystems.eu</a>
+            <h3 class="text-xl font-semibold text-white mb-2">Contact</h3>
+            <p class="text-lg text-gray-300 mb-4">
+                E-Mail: <a href="mailto:f.ternis@xpsystems.eu"
+                    class="text-blue-400 hover:underline">f.ternis@xpsystems.eu</a><br>
+                Phone: (not public)
             </p>
 
-            <h2 class="text-3xl font-bold text-white mb-4">Scope of this Imprint</h2>
-            <p class="text-lg text-gray-300 mb-6">
-                This imprint is valid for the following websites and their subdomains owned by Fabian Elias Ternis, XP Systems, or MTEX.dev:
+            <h3 class="text-xl font-semibold text-white mb-2">Person responsible for journalistic-editorial content
+            </h3>
+            <p class="text-lg text-gray-300 mb-4">
+                Fabian Elias Ternis<br>
+                (Address see above)
             </p>
-            <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mb-6 max-h-96 overflow-y-auto custom-scrollbar p-2 rounded-md bg-gray-700">
+
+            <h3 class="text-xl font-semibold text-white mb-2">Notice</h3>
+            <p class="text-lg text-gray-300 mb-6">
+                This offer is operated non-commercially by a natural person. Unless otherwise stated, the operation
+                is carried out without the intention of making a profit.
+            </p>
+
+            <h3 class="text-xl font-semibold text-white mb-2">Hosting / Provider</h3>
+            <p class="text-lg text-gray-300 mb-6">
+                Hosting Provider: <strong>Einzelunternehmen Tom Gewiese</strong><br>
+                Tom Gewiese, Obernaglbach 2, 94259 Kirchberg im Wald, Deutschland
+            </p>
+
+            <h3 class="text-xl font-semibold text-white mb-2">Scope of this Imprint</h3>
+            <p class="text-lg text-gray-300 mb-4">
+                This imprint applies to the following websites and subdomains operated or managed by Fabian Elias
+                Ternis, XP Systems or MTEX.dev:
+            </p>
+
+            <ul
+                class="list-disc list-inside text-lg text-gray-300 space-y-2 mb-6 max-h-96 overflow-y-auto custom-scrollbar p-2 rounded-md bg-gray-700">
                 <li>xpsystems.eu (*.xpsystems.eu)</li>
                 <li>mtex.dev (*.mtex.dev)</li>
                 <li>xp-craft.de (*.xp-craft.de)</li>
@@ -105,7 +127,8 @@
                 <li>xp-ad.de (*.xp-ad.de)</li>
                 <li>laravel-tutorial.eu (*.laravel-tutorial.eu)</li>
                 <li>gehirn-weg.de (*.gehirn-weg.de)</li>
-                <li>staatliches-heinrich-heine-gymnasium-kaiserslautern.de (*.staatliches-heinrich-heine-gymnasium-kaiserslautern.de)</li>
+                <li>staatliches-heinrich-heine-gymnasium-kaiserslautern.de
+                    (*.staatliches-heinrich-heine-gymnasium-kaiserslautern.de)</li>
                 <li>spielefrei.de (*.spielefrei.de)</li>
                 <li>yourlink.app (not redirected sites)</li>
                 <li>mcserver.lol (*.mcserver.lol)</li>
@@ -121,28 +144,75 @@
                 <li>fabian-ternis.de</li>
                 <li>WoIstDasDrachenei.de</li>
             </ul>
+
+            <h3 class="text-xl font-semibold text-white mb-2">Liability / Disclaimer</h3>
+            <p class="text-lg text-gray-300 mb-6">
+                Despite careful content control, we assume no liability for the content of external links. The
+                operators of the linked pages are solely responsible for their content.
+            </p>
+
+            <p class="text-sm text-gray-400">
+                Last update: {{ date('d.m.Y') }}
+            </p>
+        </div>
+
+        <!-- German -->
+        <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-yellow-500 mt-8" data-aos="fade-up"
+            data-aos-delay="200">
+            <h2 class="text-2xl font-bold text-white mb-2">Angaben gemäß § 5 DDG / Impressum (Deutsch)</h2>
+            <p class="text-lg text-gray-300 mb-4">
+                Verantwortlicher (Betreiber):<br>
+                Fabian Elias Ternis<br>
+                Alzeyer Str. 97<br>
+                67592 Flörsheim-Dalsheim<br>
+                Deutschland
+            </p>
+
+            <h3 class="text-xl font-semibold text-white mb-2">Kontakt</h3>
+            <p class="text-lg text-gray-300 mb-4">
+                E-Mail: <a href="mailto:f.ternis@xpsystems.eu"
+                    class="text-blue-400 hover:underline">f.ternis@xpsystems.eu</a><br>
+                Telefon: (nicht öffentlich)
+            </p>
+
+            <h3 class="text-xl font-semibold text-white mb-2">Verantwortliche Person für journalistisch-redaktionelle
+                Inhalte</h3>
+            <p class="text-lg text-gray-300 mb-4">
+                Fabian Elias Ternis<br>
+                (Anschrift siehe oben)
+            </p>
+
+            <h3 class="text-xl font-semibold text-white mb-2">Hinweis</h3>
+            <p class="text-lg text-gray-300 mb-6">
+                Dieses Angebot wird von einer natürlichen Person nicht-kommerziell betrieben. Soweit nicht anders
+                angegeben erfolgt der Betrieb ohne Gewinnerzielungsabsicht.
+            </p>
+
+            <p class="text-sm text-gray-400">
+                Letzte Aktualisierung: {{ date('d.m.Y') }}
+            </p>
         </div>
     </div>
 </section>
 @endsection
 
 <style>
-.custom-scrollbar::-webkit-scrollbar {
-    width: 8px;
-}
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+    }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-    background: #1e293b; /* slate-800 */
-    border-radius: 10px;
-}
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #1e293b;
+        border-radius: 10px;
+    }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #667eea;
-    border-radius: 10px;
-    border: 2px solid #1e293b;
-}
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #667eea;
+        border-radius: 10px;
+        border: 2px solid #1e293b;
+    }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: #764ba2;
-}
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: #764ba2;
+    }
 </style>
