@@ -130,14 +130,19 @@
         @yield('content')
     </main>
 
-    <footer class="bg-gradient-to-r from-blue-900 to-indigo-500 text-gray-300 p-8 text-center mt-12">
+<footer class="bg-gradient-to-r from-blue-900 to-indigo-500 text-gray-300 p-8 text-center mt-12">
         <div class="container mx-auto">
             <p>&copy; {{ date('Y') }} Fabian Ternis. All rights reserved.</p>
             <div class="mt-4 space-x-6">
-                <a href="https://github.com/michaelninder" target="_blank" class="text-gray-300 hover:text-white transition-colors duration-300"><i class="bi bi-github text-2xl"></i></a>
+                <a href="https://github.com/michaelninder" target="_blank"
+                    class="text-gray-300 hover:text-white transition-colors duration-300"><i
+                        class="bi bi-github text-2xl"></i></a>
             </div>
-            <div class="mt-4">
-                <a href="{{ route('imprint') }}" class="text-gray-300 hover:text-white transition-colors duration-300 text-sm">Imprint</a>
+            <div class="mt-4 space-x-4"> {{-- Added space-x-4 for spacing between links --}}
+                <a href="{{ route('imprint') }}"
+                    class="text-gray-300 hover:text-white transition-colors duration-300 text-sm">Imprint</a>
+                <a href="{{ route('privacy') }}"
+                    class="text-gray-300 hover:text-white transition-colors duration-300 text-sm">Privacy</a>
             </div>
         </div>
     </footer>

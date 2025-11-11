@@ -6,56 +6,64 @@
 @section('meta_keywords', 'Imprint, Impressum, Fabian Ternis, XP Systems, MTEX.dev, contact, legal notice, Flörsheim-Dalsheim')
 
 @section('content')
-<section class="py-20 bg-gray-900 min-h-screen">
+<section class="py-20 bg-slate-900 min-h-screen">
     <div class="container mx-auto px-6 max-w-3xl">
-        <h1 class="text-5xl font-extrabold text-center text-amber-400 mb-12" data-aos="fade-up">Imprint /
-            Impressum</h1>
+        <div class="mb-16" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                Imprint / Impressum
+            </h1>
+            <p class="text-xl text-gray-400 max-w-3xl">
+                Legal information regarding the operation of this website and associated online presences.
+            </p>
+        </div>
 
         <!-- English version -->
-        <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-yellow-500" data-aos="fade-up">
-            <h2 class="text-2xl font-bold text-white mb-2">Imprint / Legal Notice (English)</h2>
-            <p class="text-lg text-gray-300 mb-4">
-                Provider / Operator:<br>
+        <div class="group bg-slate-800 p-8 rounded-lg shadow-md border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg"
+            data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-white mb-4">Imprint / Legal Notice (English)</h2>
+
+            <h3 class="text-xl font-semibold text-blue-400 mb-2">Provider / Operator:</h3>
+            <p class="text-lg text-gray-300 mb-6">
                 Fabian Elias Ternis<br>
                 Alzeyer Str. 97<br>
                 67592 Flörsheim-Dalsheim<br>
                 Germany
             </p>
 
-            <h3 class="text-xl font-semibold text-white mb-2">Contact</h3>
-            <p class="text-lg text-gray-300 mb-4">
+            <h3 class="text-xl font-semibold text-blue-400 mb-2">Contact</h3>
+            <p class="text-lg text-gray-300 mb-6">
                 E-Mail: <a href="mailto:f.ternis@xpsystems.eu"
                     class="text-blue-400 hover:underline">f.ternis@xpsystems.eu</a><br>
                 Phone: (not public)
             </p>
 
-            <h3 class="text-xl font-semibold text-white mb-2">Person responsible for journalistic-editorial content
-            </h3>
-            <p class="text-lg text-gray-300 mb-4">
+            <h3 class="text-xl font-semibold text-blue-400 mb-2">Person responsible for journalistic-editorial
+                content</h3>
+            <p class="text-lg text-gray-300 mb-6">
                 Fabian Elias Ternis<br>
                 (Address see above)
             </p>
 
-            <h3 class="text-xl font-semibold text-white mb-2">Notice</h3>
+            <h3 class="text-xl font-semibold text-blue-400 mb-2">Notice</h3>
             <p class="text-lg text-gray-300 mb-6">
-                This offer is operated non-commercially by a natural person. Unless otherwise stated, the operation
-                is carried out without the intention of making a profit.
+                This offer is operated non-commercially by a natural person. Unless otherwise stated, the
+                operation is carried out without the intention of making a profit.
             </p>
 
-            <h3 class="text-xl font-semibold text-white mb-2">Hosting / Provider</h3>
+            <h3 class="text-xl font-semibold text-blue-400 mb-2">Hosting / Provider</h3>
             <p class="text-lg text-gray-300 mb-6">
                 Hosting Provider: <strong>Einzelunternehmen Tom Gewiese</strong><br>
-                Tom Gewiese, Obernaglbach 2, 94259 Kirchberg im Wald, Deutschland
+                Tom Gewiese, Obernaglbach 2, 94259 Kirchberg im Wald, Germany
             </p>
 
-            <h3 class="text-xl font-semibold text-white mb-2">Scope of this Imprint</h3>
+            <h3 class="text-xl font-semibold text-blue-400 mb-2">Scope of this Imprint</h3>
             <p class="text-lg text-gray-300 mb-4">
                 This imprint applies to the following websites and subdomains operated or managed by Fabian Elias
                 Ternis, XP Systems or MTEX.dev:
             </p>
 
             <ul
-                class="list-disc list-inside text-lg text-gray-300 space-y-2 mb-6 max-h-96 overflow-y-auto custom-scrollbar p-2 rounded-md bg-gray-700">
+                class="list-disc list-inside text-lg text-gray-300 space-y-2 mb-6 max-h-96 overflow-y-auto custom-scrollbar p-2 rounded-md bg-slate-700 border border-slate-600">
                 <li>xpsystems.eu (*.xpsystems.eu)</li>
                 <li>mtex.dev (*.mtex.dev)</li>
                 <li>xp-craft.de (*.xp-craft.de)</li>
@@ -145,50 +153,51 @@
                 <li>WoIstDasDrachenei.de</li>
             </ul>
 
-            <h3 class="text-xl font-semibold text-white mb-2">Liability / Disclaimer</h3>
+            <h3 class="text-xl font-semibold text-blue-400 mb-2">Liability / Disclaimer</h3>
             <p class="text-lg text-gray-300 mb-6">
                 Despite careful content control, we assume no liability for the content of external links. The
                 operators of the linked pages are solely responsible for their content.
             </p>
 
-            <p class="text-sm text-gray-400">
+            <p class="text-sm text-gray-400 text-right mt-8">
                 Last update: {{ date('d.m.Y') }}
             </p>
         </div>
 
-        <!-- German -->
-        <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-yellow-500 mt-8" data-aos="fade-up"
-            data-aos-delay="200">
-            <h2 class="text-2xl font-bold text-white mb-2">Angaben gemäß § 5 DDG / Impressum (Deutsch)</h2>
-            <p class="text-lg text-gray-300 mb-4">
-                Verantwortlicher (Betreiber):<br>
+        <!-- German version -->
+        <div class="group bg-slate-800 p-8 rounded-lg shadow-md border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg mt-8"
+            data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-3xl font-bold text-white mb-4">Angaben gemäß § 5 DDG / Impressum (Deutsch)</h2>
+
+            <h3 class="text-xl font-semibold text-blue-400 mb-2">Verantwortlicher (Betreiber):</h3>
+            <p class="text-lg text-gray-300 mb-6">
                 Fabian Elias Ternis<br>
                 Alzeyer Str. 97<br>
                 67592 Flörsheim-Dalsheim<br>
                 Deutschland
             </p>
 
-            <h3 class="text-xl font-semibold text-white mb-2">Kontakt</h3>
-            <p class="text-lg text-gray-300 mb-4">
+            <h3 class="text-xl font-semibold text-blue-400 mb-2">Kontakt</h3>
+            <p class="text-lg text-gray-300 mb-6">
                 E-Mail: <a href="mailto:f.ternis@xpsystems.eu"
                     class="text-blue-400 hover:underline">f.ternis@xpsystems.eu</a><br>
                 Telefon: (nicht öffentlich)
             </p>
 
-            <h3 class="text-xl font-semibold text-white mb-2">Verantwortliche Person für journalistisch-redaktionelle
+            <h3 class="text-xl font-semibold text-blue-400 mb-2">Verantwortliche Person für journalistisch-redaktionelle
                 Inhalte</h3>
-            <p class="text-lg text-gray-300 mb-4">
+            <p class="text-lg text-gray-300 mb-6">
                 Fabian Elias Ternis<br>
                 (Anschrift siehe oben)
             </p>
 
-            <h3 class="text-xl font-semibold text-white mb-2">Hinweis</h3>
+            <h3 class="text-xl font-semibold text-blue-400 mb-2">Hinweis</h3>
             <p class="text-lg text-gray-300 mb-6">
                 Dieses Angebot wird von einer natürlichen Person nicht-kommerziell betrieben. Soweit nicht anders
                 angegeben erfolgt der Betrieb ohne Gewinnerzielungsabsicht.
             </p>
 
-            <p class="text-sm text-gray-400">
+            <p class="text-sm text-gray-400 text-right mt-8">
                 Letzte Aktualisierung: {{ date('d.m.Y') }}
             </p>
         </div>
