@@ -138,7 +138,7 @@
                     class="text-gray-300 hover:text-white transition-colors duration-300"><i
                         class="bi bi-github text-2xl"></i></a>
             </div>
-            <div class="mt-4 space-x-4"> {{-- Added space-x-4 for spacing between links --}}
+            <div class="mt-4 space-x-4">
                 <a href="{{ route('imprint') }}"
                     class="text-gray-300 hover:text-white transition-colors duration-300 text-sm">Imprint</a>
                 <a href="{{ route('privacy') }}"
