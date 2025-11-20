@@ -24,7 +24,7 @@
     <meta name="twitter:description" content="@yield('twitter_description', 'A peek into the projects and expertise of Fabian Ternis, a dedicated Laravel and backend development specialist.')">
     <meta name="twitter:image" content="@yield('twitter_image', asset('img/social-share.png'))">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         body::-webkit-scrollbar { display: none; }
