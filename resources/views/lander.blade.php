@@ -48,6 +48,55 @@
     </div>
 </section>
 
+<section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6">
+        <h2 class="text-5xl font-extrabold text-center text-purple-400 mb-12" data-aos="fade-up">My Key Projects & Works</h2>
+        @include('lander.projects')
+    </div>
+</section>
+
+<section class="py-20 bg-slate-900">
+    <div class="container mx-auto px-6 max-w-7xl">
+        <div class="mb-16" data-aos="fade-up">
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                My Toolbox
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl">
+                A collection of programming languages, frameworks, and tools I leverage to build robust and scalable web applications.
+            </p>
+        </div>
+        @include('lander.tools')
+    </div>
+</section>
+
+<section class="py-20 bg-slate-900 min-h-screen">
+    <div class="container mx-auto px-6 max-w-7xl">
+        <div class="mb-16" data-aos="fade-up">
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                Professional Journey
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl">
+                A structured overview of my professional growth, key roles, and impactful projects that define my expertise in web development.
+            </p>
+        </div>
+        @include('lander.experience')
+    </div>
+</section>
+
+<section class="py-20 bg-slate-900 min-h-screen">
+    <div class="container mx-auto px-6 max-w-7xl">
+        <div class="mb-16" data-aos="fade-up">
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                Educational Journey
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl">
+                A detailed timeline of my academic path, highlighting key institutions, programs, and milestones.
+            </p>
+        </div>
+        @include('lander.education')
+    </div>
+</section>
+
 @endsection
 
 @section('scripts')
