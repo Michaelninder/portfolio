@@ -15,8 +15,6 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="@yield('og_image', asset('img/social-share.png'))">
 
-	<meta property="og:image:width" content="@yield('og_image_width', '288')">
-    <meta property="og:image:height" content="@yield('og_image_height', '288')">
     <meta property="og:locale" content="{{ str_replace('_', '-', app()->getLocale()) }}">
 
     <meta name="twitter:card" content="summary_large_image">
