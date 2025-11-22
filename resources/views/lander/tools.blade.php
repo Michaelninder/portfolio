@@ -31,10 +31,10 @@
         <h3 class="text-xl font-bold text-gray-400 mb-1">
             And many more...
         </h3>
-        <a href="{{ route('tools') }}"
-            class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300">
-            <i class="bi bi-arrow-right"></i>
-            See all tools
-        </a>
     </div>
+    <a href="{{ route('tools') }}"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300">
+        <i class="bi bi-arrow-right"></i>
+        See all tools
+    </a>
 </div>
