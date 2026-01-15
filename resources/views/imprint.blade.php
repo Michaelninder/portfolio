@@ -151,6 +151,13 @@
                 <li>getmy.blog</li>
                 <li>fabian-ternis.de</li>
                 <li>WoIstDasDrachenei.de</li>
+                <li>ivoternis.de</li>
+                <li>michaelninder.de</li>
+                <li>192-168-0-1.de</li>
+                <li>sandbox-api.de</li>
+                <li>api-sandbox.de</li>
+                <li>mail-free.eu</li>
+                <li>hhg-kl.eu</li>
             </ul>
 
             <h3 class="text-xl font-semibold text-blue-400 mb-2">Liability / Disclaimer</h3>
